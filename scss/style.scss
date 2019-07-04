@@ -1,3 +1,6 @@
+@import "colors";
+@import "fonts";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +9,105 @@
 }
 html,
 body {
+  min-height: 1000px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+.header {
+  position: relative;
+  padding: 0 20px;
+  height: 50px;
+  display: flex;
+  background-color: $back_light;
+  align-items: center;
+  &__link {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    justify-self: end;
+    margin-right: 12px;
+    &--github {
+      background-image: url(../img/github.svg);
+    }
+    &--linkedin {
+      background-image: url(../img/linkedin.svg);
+    }
+  }
+}
+
+.navigation {
+  justify-self: end;
+  &__menu {
+    width: 25px;
+    height: 25px;
+    border: 1px solid $red;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    span {
+      display: block;
+      width: 12px;
+      height: 1px;
+      background-color: $red;
+      margin: 0 auto;
+      &:nth-of-type(2) {
+        margin: 3px auto;
+      }
+    }
+  }
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  &__title {
+    font-family: $main_font;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    min-width: 120px;
+    span {
+      color: $red;
+    }
+  }
+  &__subtitle {
+    font-family: $sec_font;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: $grey;
+    min-width: 120px;
+  }
+}
+
+.navigation {
+  &__list {
+    position: absolute;
+    z-index: 5;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: $back_light;
+    &--hidden {
+      display: none;
+    }
+  }
+  &__item {
+    height: 40px;
+  }
+  &__link {
+    list-style: none;
+    color: white;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    font-family: $sec_font;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
 }
