@@ -6,9 +6,15 @@
 
 html,
 body {
-  min-height: 1000px;
   overflow-x: hidden;
   scroll-behavior: smooth; }
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none; }
 
 .header {
   position: relative;
@@ -17,6 +23,14 @@ body {
   display: flex;
   background-color: #2b323e;
   align-items: center; }
+  @media (min-width: 800px) {
+    .header {
+      height: 70px;
+      padding: 0 10%; } }
+  @media (min-width: 1200px) {
+    .header {
+      height: 100px;
+      padding: 0 15%; } }
   .header__link {
     display: block;
     width: 20px;
@@ -24,10 +38,34 @@ body {
     background-size: contain;
     justify-self: end;
     margin-right: 12px; }
+    @media (min-width: 800px) {
+      .header__link {
+        margin-right: 20px;
+        width: 24px;
+        height: 24px; } }
     .header__link--github {
       background-image: url(../img/github.svg); }
     .header__link--linkedin {
       background-image: url(../img/linkedin.svg); }
+  .header__contact {
+    display: none; }
+    @media (min-width: 800px) {
+      .header__contact {
+        display: block;
+        width: 90px;
+        height: 30px;
+        border: 1px solid #ffb820;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: white;
+        font-family: "Arimo", sans-serif;
+        cursor: pointer; }
+        .header__contact:hover {
+          border: 2px solid #ffb820; } }
 
 .navigation {
   justify-self: end; }
@@ -46,6 +84,9 @@ body {
       margin: 0 auto; }
       .navigation__menu span:nth-of-type(2) {
         margin: 3px auto; }
+    @media (min-width: 800px) {
+      .navigation__menu {
+        display: none; } }
 
 .logo {
   flex: 1;
@@ -66,7 +107,8 @@ body {
     font-size: 9px;
     text-transform: uppercase;
     color: #989898;
-    min-width: 120px; }
+    min-width: 120px;
+    font-weight: 400; }
 
 .navigation__list {
   position: absolute;
@@ -75,9 +117,14 @@ body {
   left: 0;
   width: 100%;
   height: 120px;
-  background-color: #2b323e; }
-  .navigation__list--hidden {
-    display: none; }
+  background-color: #2b323e;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s ease; }
+  .navigation__list--active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease; }
 
 .navigation__item {
   height: 40px; }
@@ -90,4 +137,224 @@ body {
   text-align: center;
   font-family: "Arimo", sans-serif;
   font-size: 14px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: color 0.3s ease; }
+  .navigation__link:hover {
+    color: #ff493c; }
+
+.hero {
+  height: calc(100vh - 50px);
+  padding: 0 20px;
+  background-color: #2b323e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-image: url(../img/person_shadow.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 60vh; }
+  @media (min-width: 800px) {
+    .hero {
+      height: calc(100vh - 70px);
+      padding: 0 10%;
+      background-position: 20% 100%; } }
+  @media (min-width: 1200px) {
+    .hero {
+      height: calc(100vh - 100px);
+      padding: 0 15%; } }
+  .hero__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px; }
+    .hero__title::first-letter {
+      color: #ff493c; }
+    @media (min-width: 500px) {
+      .hero__title {
+        font-size: 40px; } }
+    @media (min-width: 800px) {
+      .hero__title {
+        font-size: 45px; } }
+    @media (min-width: 1200px) {
+      .hero__title {
+        font-size: 50px; } }
+  .hero__subtitle {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    line-height: 25px;
+    text-align: right;
+    width: 250px;
+    margin-bottom: 10px; }
+    @media (min-width: 500px) {
+      .hero__subtitle {
+        font-size: 24px;
+        line-height: 29px; } }
+    @media (min-width: 800px) {
+      .hero__subtitle {
+        font-size: 30px;
+        line-height: 35px; } }
+    @media (min-width: 1200px) {
+      .hero__subtitle {
+        font-size: 35px;
+        line-height: 40px; } }
+    @media (min-width: 500px) {
+      .hero__subtitle {
+        width: 300px; } }
+    @media (min-width: 800px) {
+      .hero__subtitle {
+        width: 370px; } }
+    @media (min-width: 1200px) {
+      .hero__subtitle {
+        width: 430px; } }
+  .hero__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
+    line-height: 20px;
+    text-align: right;
+    margin-bottom: 30vh;
+    width: 300px; }
+    @media (min-width: 500px) {
+      .hero__text {
+        font-size: 18px;
+        line-height: 22px; } }
+    @media (min-width: 800px) {
+      .hero__text {
+        font-size: 20px;
+        line-height: 24px; } }
+    @media (min-width: 1200px) {
+      .hero__text {
+        font-size: 22px;
+        line-height: 26px; } }
+    @media (min-width: 500px) {
+      .hero__text {
+        width: 340px; } }
+    @media (min-width: 800px) {
+      .hero__text {
+        width: 470px;
+        margin-bottom: 40vh; } }
+    @media (min-width: 1200px) {
+      .hero__text {
+        width: 515px; } }
+
+.portfolio {
+  padding: 20px 25px;
+  background-color: #1b222e;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto); }
+  @media (min-width: 800px) {
+    .portfolio {
+      padding: 70px 10%; } }
+  @media (min-width: 1200px) {
+    .portfolio {
+      padding: 70px 15%; } }
+  .portfolio__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 25px; }
+    .portfolio__title::first-letter {
+      color: #ff493c; }
+    @media (min-width: 500px) {
+      .portfolio__title {
+        font-size: 40px; } }
+    @media (min-width: 800px) {
+      .portfolio__title {
+        font-size: 45px; } }
+    @media (min-width: 1200px) {
+      .portfolio__title {
+        font-size: 50px; } }
+
+.project {
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  .project:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% + 15px);
+    height: calc(100% + 20px);
+    left: -5px;
+    top: -5px;
+    background: transparent;
+    border: 1px solid #ffb820; }
+  .project__photo {
+    position: relative; }
+    .project__photo img {
+      width: 100%;
+      height: auto; }
+    .project__photo:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: calc(100% + 15px);
+      height: calc(100% + 10px);
+      left: -10px;
+      top: -10px;
+      background: transparent;
+      border: 1px solid #ff493c; }
+  .project__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
+    line-height: 20px;
+    margin-top: 20px;
+    font-weight: 400;
+    padding: 0 10px; }
+    @media (min-width: 500px) {
+      .project__title {
+        font-size: 18px;
+        line-height: 22px; } }
+    @media (min-width: 800px) {
+      .project__title {
+        font-size: 20px;
+        line-height: 24px; } }
+    @media (min-width: 1200px) {
+      .project__title {
+        font-size: 22px;
+        line-height: 26px; } }
+  .project__description {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    color: white;
+    line-height: 20px;
+    margin-top: 20px;
+    padding: 0 10px; }
+  .project__technologies {
+    list-style: none;
+    display: flex;
+    margin-top: 15px;
+    padding: 0 10px; }
+    .project__technologies li {
+      min-width: 40px;
+      color: white;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 18px;
+      font-size: 9px;
+      font-family: "Arimo", sans-serif;
+      border: 1px solid white;
+      border-radius: 9px;
+      padding: 0 5px;
+      margin-right: 10px; }
+  .project__github {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/github.svg);
+    background-size: contain;
+    align-self: flex-end;
+    margin-right: 15px; }

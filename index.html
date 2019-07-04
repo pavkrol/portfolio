@@ -18,8 +18,8 @@
   <body>
     <header class="header">
       <div class="header__logo logo">
-        <p class="logo__title"><span>P</span>aweł <span>K</span>ról</p>
-        <p class="logo__subtitle">Web Developer</p>
+        <h1 class="logo__title"><span>P</span>aweł <span>K</span>ról</h1>
+        <h2 class="logo__subtitle">Web Developer</h2>
       </div>
       <a
         href="https://github.com/pavkrol"
@@ -31,8 +31,12 @@
         class="header__link header__link--linkedin"
         aria-label="linkedin link"
       ></a>
+      <a href="#" class="header__contact">
+        Kontakt
+      </a>
       <nav id="navigation" class="header__navigation navigation">
         <button
+          id="navigation__menu"
           class="navigation__menu"
           type="button"
           aria-label="menu"
@@ -44,7 +48,7 @@
           <span></span>
         </button>
 
-        <ul class="navigation__list navigation__list">
+        <ul id="navigation__list" class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="#">Portfolio</a>
           </li>
@@ -57,5 +61,44 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <section class="hero">
+        <h3 class="hero__title">Cześć</h3>
+        <h4 class="hero__subtitle">Mam na imię Paweł Jestem Web Developerem</h4>
+        <p class="hero__text">
+          Poniżej znajdziesz kilka projektów, które wykonałem oraz więcej
+          informacji o mnie
+        </p>
+      </section>
+      <section class="portfolio">
+        <h3 class="portfolio__title">Portfolio</h3>
+        <article class="portfolio__project project">
+          <a class="project__photo">
+            <img
+              src="./img/project_angaz.jpg"
+              alt="screenshot of website for local company AN-GAZ"
+            />
+          </a>
+          <h4 class="project__title">AN-GAZ Dystrybucja Gazu</h4>
+          <h5 class="project__description">
+            Strona internetowa typu one-page stworzona dla lokalnej firmy
+            zajmującej się dystrybucją gazu. Strona w całości zaprojektowana
+            przeze mnie. W trakcie jej implementacji wykorzystałem podejście
+            mobile first, preprocesor SCSS i metodologię BEM. Slider został
+            napisany w czystym JS.
+          </h5>
+          <ul class="project__technologies">
+            <li>SCSS</li>
+            <li>BEM</li>
+            <li>JS</li>
+          </ul>
+          <a
+            href="https://github.com/pavkrol/angaz-company-website"
+            class="project__github"
+          ></a>
+        </article>
+      </section>
+    </main>
+    <script src="./scripts/menu.js"></script>
   </body>
 </html>

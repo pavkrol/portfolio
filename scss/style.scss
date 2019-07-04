@@ -1,5 +1,6 @@
 @import "colors";
 @import "fonts";
+@import "mixins";
 
 * {
   margin: 0;
@@ -9,9 +10,16 @@
 }
 html,
 body {
-  min-height: 1000px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
 }
 
 .header {
@@ -21,6 +29,14 @@ body {
   display: flex;
   background-color: $back_light;
   align-items: center;
+  @include media("medium") {
+    height: 70px;
+    padding: 0 10%;
+  }
+  @include media("large") {
+    height: 100px;
+    padding: 0 15%;
+  }
   &__link {
     display: block;
     width: 20px;
@@ -28,11 +44,23 @@ body {
     background-size: contain;
     justify-self: end;
     margin-right: 12px;
+    @include media("medium") {
+      margin-right: 20px;
+      width: 24px;
+      height: 24px;
+    }
     &--github {
       background-image: url(../img/github.svg);
     }
     &--linkedin {
       background-image: url(../img/linkedin.svg);
+    }
+  }
+  &__contact {
+    display: none;
+    @include media("medium") {
+      display: block;
+      @include button(90px, 30px, $yellow);
     }
   }
 }
@@ -55,6 +83,9 @@ body {
       &:nth-of-type(2) {
         margin: 3px auto;
       }
+    }
+    @include media("medium") {
+      display: none;
     }
   }
 }
@@ -81,6 +112,7 @@ body {
     text-transform: uppercase;
     color: $grey;
     min-width: 120px;
+    font-weight: 400;
   }
 }
 
@@ -93,8 +125,13 @@ body {
     width: 100%;
     height: 120px;
     background-color: $back_light;
-    &--hidden {
-      display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.3s, opacity 0.3s ease;
+    &--active {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s ease;
     }
   }
   &__item {
@@ -109,5 +146,156 @@ body {
     font-family: $sec_font;
     font-size: 14px;
     text-transform: uppercase;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.hero {
+  height: calc(100vh - 50px);
+  padding: 0 20px;
+  background-color: $back_light;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-image: url(../img/person_shadow.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 60vh;
+  @include media("medium") {
+    height: calc(100vh - 70px);
+    padding: 0 10%;
+    background-position: 20% 100%;
+  }
+  @include media("large") {
+    height: calc(100vh - 100px);
+    padding: 0 15%;
+  }
+  &__title {
+    @include title;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    @include subtitle;
+    text-align: right;
+    width: 250px;
+    margin-bottom: 10px;
+    @include media("small") {
+      width: 300px;
+    }
+    @include media("medium") {
+      width: 370px;
+    }
+    @include media("large") {
+      width: 430px;
+    }
+  }
+  &__text {
+    @include second_subtitle;
+    text-align: right;
+    margin-bottom: 30vh;
+    width: 300px;
+    @include media("small") {
+      width: 340px;
+    }
+    @include media("medium") {
+      width: 470px;
+      margin-bottom: 40vh;
+    }
+    @include media("large") {
+      width: 515px;
+    }
+  }
+}
+
+.portfolio {
+  @include sizing;
+  background-color: $back_dark;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  &__title {
+    @include title;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% + 15px);
+    height: calc(100% + 20px);
+    left: -5px;
+    top: -5px;
+    background: transparent;
+    border: 1px solid $yellow;
+  }
+  &__photo {
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: calc(100% + 15px);
+      height: calc(100% + 10px);
+      left: -10px;
+      top: -10px;
+      background: transparent;
+      border: 1px solid $red;
+    }
+  }
+  &__title {
+    @include second_subtitle;
+    margin-top: 20px;
+    font-weight: 400;
+    padding: 0 10px;
+  }
+  &__description {
+    @include text;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+  &__technologies {
+    list-style: none;
+    display: flex;
+    margin-top: 15px;
+    padding: 0 10px;
+    li {
+      min-width: 40px;
+      color: white;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 18px;
+      font-size: 9px;
+      font-family: $sec_font;
+      border: 1px solid white;
+      border-radius: 9px;
+      padding: 0 5px;
+      margin-right: 10px;
+    }
+  }
+  &__github {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/github.svg);
+    background-size: contain;
+    align-self: flex-end;
+    margin-right: 15px;
   }
 }

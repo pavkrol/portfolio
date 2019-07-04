@@ -14,3 +14,98 @@ $breakpoints: (
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+@mixin button($width, $height, $color) {
+  width: $width;
+  height: $height;
+  border: 1px solid $color;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: white;
+  font-family: $sec_font;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $color;
+  }
+}
+
+@mixin title {
+  font-family: $main_font;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  &::first-letter {
+    color: $red;
+  }
+  @include media("small") {
+    font-size: 40px;
+  }
+  @include media("medium") {
+    font-size: 45px;
+  }
+  @include media("large") {
+    font-size: 50px;
+  }
+}
+
+@mixin subtitle {
+  font-family: $main_font;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  line-height: 25px;
+  @include media("small") {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  @include media("medium") {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  @include media("large") {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+@mixin second_subtitle {
+  font-family: $main_font;
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+  line-height: 20px;
+  @include media("small") {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  @include media("medium") {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @include media("large") {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@mixin sizing {
+  padding: 20px 25px;
+  @include media("medium") {
+    padding: 70px 10%;
+  }
+  @include media("large") {
+    padding: 70px 15%;
+  }
+}
+
+@mixin text {
+  font-family: $main_font;
+  font-size: 14px;
+  font-weight: 200;
+  color: white;
+  line-height: 20px;
+}
