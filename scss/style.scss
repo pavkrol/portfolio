@@ -217,10 +217,22 @@ input[type="submit"] {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, auto);
+  @include media("medium_small") {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 40px;
+  }
+  @include media("large") {
+    grid-column-gap: 80px;
+    grid-row-gap: 30px;
+  }
   &__title {
     @include title;
     text-align: center;
     margin-bottom: 25px;
+    @include media("medium_small") {
+      grid-column: span 2;
+    }
   }
 }
 
@@ -228,6 +240,7 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 50px;
   &:before {
     content: "";
     display: block;
@@ -236,7 +249,7 @@ input[type="submit"] {
     height: calc(100% + 20px);
     left: -5px;
     top: -5px;
-    background: transparent;
+    background: none;
     border: 1px solid $yellow;
   }
   &__photo {
@@ -253,13 +266,13 @@ input[type="submit"] {
       height: calc(100% + 10px);
       left: -10px;
       top: -10px;
-      background: transparent;
+      background: none;
       border: 1px solid $red;
     }
   }
   &__title {
     @include second_subtitle;
-    margin-top: 20px;
+    margin-top: 25px;
     font-weight: 400;
     padding: 0 10px;
   }
@@ -290,12 +303,12 @@ input[type="submit"] {
     }
   }
   &__github {
-    display: block;
     width: 20px;
     height: 20px;
     background-image: url(../img/github.svg);
     background-size: contain;
     align-self: flex-end;
     margin-right: 15px;
+    z-index: 2;
   }
 }
