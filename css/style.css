@@ -377,7 +377,7 @@ input[type="submit"] {
   background-color: #2b323e;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, auto); }
+  grid-template-rows: repeat(3, auto); }
   @media (min-width: 800px) {
     .about {
       padding: 70px 10%; } }
@@ -386,11 +386,13 @@ input[type="submit"] {
       padding: 70px 15%; } }
   @media (min-width: 800px) {
     .about {
-      grid-template-rows: repeat(3, auto);
-      grid-column-gap: 30px; } }
+      background-image: url(../img/about_background.png);
+      background-repeat: no-repeat;
+      background-position: center 91%;
+      background-size: 55%; } }
   @media (min-width: 1200px) {
     .about {
-      grid-column-gap: 50px; } }
+      background-position: center 96%; } }
   .about__title {
     font-family: "Raleway", sans-serif;
     font-size: 35px;
@@ -410,6 +412,14 @@ input[type="submit"] {
     @media (min-width: 1200px) {
       .about__title {
         font-size: 50px; } }
+  .about__text {
+    grid-column: span 2;
+    padding-bottom: 10px;
+    margin-bottom: 25px; }
+    @media (min-width: 800px) {
+      .about__text {
+        columns: 2 auto;
+        column-gap: 50px; } }
   .about__paragraph {
     font-family: "Raleway", sans-serif;
     font-size: 14px;
@@ -417,14 +427,12 @@ input[type="submit"] {
     color: white;
     line-height: 20px;
     margin-bottom: 20px;
-    grid-column: span 2;
     line-height: 24px; }
     .about__paragraph strong {
       font-weight: bold;
       color: #ffb820; }
-    @media (min-width: 800px) {
-      .about__paragraph {
-        grid-column: span 1; } }
+    .about__paragraph:last-of-type {
+      margin-bottom: 0; }
   .about__button {
     width: 90px;
     height: 30px;
@@ -442,3 +450,33 @@ input[type="submit"] {
     justify-self: center; }
     .about__button:hover {
       border: 2px solid #ff493c; }
+
+.contact {
+  padding: 20px 25px;
+  background-color: #1b222e;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto); }
+  @media (min-width: 800px) {
+    .contact {
+      padding: 70px 10%; } }
+  @media (min-width: 1200px) {
+    .contact {
+      padding: 70px 15%; } }
+  @media (min-width: 800px) {
+    .contact {
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: repeat(3, auto); } }
+
+.footer {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: white;
+  line-height: 20px;
+  height: 80px;
+  background-color: #2b323e;
+  color: #989898;
+  display: flex;
+  justify-content: center;
+  align-items: center; }

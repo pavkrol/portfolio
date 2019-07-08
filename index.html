@@ -222,31 +222,40 @@
       </section>
       <section class="about">
         <h3 class="about__title">O mnie</h3>
-        <p class="about__paragraph">
-          <strong
-            >Mam na imię Paweł i jestem Front-end Developerem z Gdańska.</strong
-          >
-          Ukończyłem studia na kierunku ekonomia w Wyższej Szkole Bankowej w
-          Gdyni. W trakcie swojej kariery zawodowej przez wiele lat pracowałem w
-          banku. Po zakończeniu mojej przygody z bankowością postanowiłem
-          kształcić się w kierunku web developmentu oraz założyć własną
-          działalność gospodarczą. Szczegóły dotyczące mojej dotychczasowej
-          ścieżki kariery zawodowej zamieściłem w CV, które można pobrać
-          poniżej.
-        </p>
-        <p class="about__paragraph">
-          W swoich projektach staram się używać poprawnego i semantycznego kodu
-          <strong>HMTL i CSS</strong>. Korzystam ze składni preprocesora
-          <strong>SCSS</strong>. Swobodnie posługuję się
-          <strong>JavaScript'em</strong>, z wykorzystaniem najnowszych
-          standardów., zarówno do tworzenia prostych interakcji na stronie, jak
-          również do bardziej skomplikowanych zadań. Obecnie kładę nacisk
-          głównie na naukę framework'a <strong>React</strong> i w tym kierunku
-          planuję się dalej rozwijać. Do tworzenia design'u własnych projektów
-          wykorzystuję głównie <strong>Adobe XD</strong>. Swobodnie posługuję
-          się językiem angielskim (w mowie i w piśmie). Posiadam certyfikaty FCE
-          oraz LCCI 3. Zachęcam do zapoznania się z moim repozytorium Github.
-        </p>
+        <section class="about__text">
+          <p class="about__paragraph">
+            <strong
+              >Mam na imię Paweł i jestem Front-end Developerem z
+              Gdańska.</strong
+            >
+            Ukończyłem studia na kierunku ekonomia w Wyższej Szkole Bankowej w
+            Gdyni. W trakcie swojej kariery zawodowej przez wiele lat pracowałem
+            w banku. Po zakończeniu mojej przygody z bankowością postanowiłem
+            kształcić się w kierunku web developmentu oraz założyć własną
+            działalność gospodarczą. Szczegóły dotyczące mojej dotychczasowej
+            ścieżki kariery zawodowej zamieściłem w CV, które można pobrać
+            poniżej.
+          </p>
+          <p class="about__paragraph">
+            W swoich projektach staram się używać poprawnego i semantycznego
+            kodu
+            <strong>HMTL i CSS</strong>. Korzystam ze składni preprocesora
+            <strong>SCSS</strong>. Swobodnie posługuję się
+            <strong>JavaScript'em</strong>, z wykorzystaniem najnowszych
+            standardów, zarówno do tworzenia prostych interakcji na stronie, jak
+            również do bardziej skomplikowanych zadań. Obecnie kładę nacisk
+            głównie na naukę framework'a <strong>React</strong> i w tym kierunku
+            planuję się dalej rozwijać. Do tworzenia design'u własnych projektów
+            wykorzystuję najczęściej <strong>Adobe XD</strong>.
+          </p>
+          <p class="about__paragraph">
+            Swobodnie posługuję się językiem angielskim (w mowie i w piśmie).
+            Posiadam certyfikaty FCE oraz LCCI 3.
+          </p>
+          <p class="about__paragraph">
+            Zachęcam do zapoznania się z moim repozytorium Github.
+          </p>
+        </section>
         <a href="#" class="about__button" aria-label="CV download link">CV</a>
         <a
           href="https://github.com/pavkrol"
@@ -255,6 +264,91 @@
           >GITHUB</a
         >
       </section>
+      <section class="contact">
+        <h3 class="contact__title">Kontakt</h3>
+        <p class="contact__text">
+          Jeśli jesteś zainteresowany współpracą lub masz zlecenie, które
+          mógłbym dla Ciebie zrealizować, zapraszam do kontaktu. Wyślij
+          wiadomość za pomocą formularza kontaktowego lub skorzystaj z
+          poniższych danych kontaktowych.
+        </p>
+        <address class="contact__details">
+          <a href="mailto:kontakt@pavkrol.pl" class="contact__email"
+            >kontakt@pavkrol.pl</a
+          >
+          <a href="tel:+48530671067" class="contact__telephone">530-671-067</a>
+        </address>
+        <form
+          id="contact__form"
+          action="scripts/send.php"
+          method="post"
+          class="contact__form form"
+        >
+          <div class="form__item">
+            <input
+              class="form__input"
+              id="form__name"
+              name="name"
+              type="text"
+              placeholder="Imię / nazwa firmy"
+              data-error="Wpisz swoje imię / nazwę firmy"
+              pattern=".+"
+              required
+            />
+            <label class="form__label" for="name">Twój adres e-mail</label>
+          </div>
+          <div class="form__item">
+            <input
+              class="form__input"
+              id="form__phone"
+              name="phone"
+              type="tel"
+              placeholder="Numer telefonu"
+            />
+            <label class="form__label" for="phone">Twój adres e-mail</label>
+          </div>
+          <div class="form__item">
+            <input
+              class="form__email"
+              id="form__email"
+              name="email"
+              type="text"
+              placeholder="Twój adres e-mail"
+              data-error="Wpisz poprawny e-mail"
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              required
+            />
+            <label class="form__label" for="email">Twój adres e-mail</label>
+          </div>
+          <div class="form__item">
+            <textarea
+              class="form__message"
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Treść wiadomości"
+              data-error="Wiadomość nie może być pusta"
+              pattern=".+"
+              required
+            ></textarea>
+            <label class="form__label" for="message">Treść wiadomości</label>
+          </div>
+          <div class="form__item honey-row">
+            <input type="text" name="honey" />
+            <label for="honey"
+              >Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label
+            >
+          </div>
+          <input
+            class="form__submit"
+            id="form__submit"
+            type="submit"
+            value="wyślij"
+            aria-label="send message"
+          />
+        </form>
+      </section>
+      <footer class="footer">&copy;2019 Paweł Król</footer>
     </main>
     <script src="./scripts/menu.js"></script>
   </body>

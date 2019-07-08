@@ -318,13 +318,15 @@ input[type="submit"] {
   background-color: $back_light;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
   @include media("medium") {
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 30px;
+    background-image: url(../img/about_background.png);
+    background-repeat: no-repeat;
+    background-position: center 91%;
+    background-size: 55%;
   }
   @include media("large") {
-    grid-column-gap: 50px;
+    background-position: center 96%;
   }
   &__title {
     @include title;
@@ -332,17 +334,25 @@ input[type="submit"] {
     margin-bottom: 25px;
     grid-column: span 2;
   }
+  &__text {
+    grid-column: span 2;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    @include media("medium") {
+      columns: 2 auto;
+      column-gap: 50px;
+    }
+  }
   &__paragraph {
     @include text;
     margin-bottom: 20px;
-    grid-column: span 2;
     line-height: 24px;
     strong {
       font-weight: bold;
       color: $yellow;
     }
-    @include media("medium") {
-      grid-column: span 1;
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
   &__button {
@@ -350,4 +360,26 @@ input[type="submit"] {
     margin-bottom: 20px;
     justify-self: center;
   }
+}
+
+.contact {
+  @include sizing;
+  background-color: $back_dark;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  @include media("medium") {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.footer {
+  @include text;
+  height: 80px;
+  background-color: $back_light;
+  color: $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
