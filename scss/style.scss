@@ -312,3 +312,42 @@ input[type="submit"] {
     z-index: 2;
   }
 }
+
+.about {
+  @include sizing;
+  background-color: $back_light;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  @include media("medium") {
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 30px;
+  }
+  @include media("large") {
+    grid-column-gap: 50px;
+  }
+  &__title {
+    @include title;
+    text-align: center;
+    margin-bottom: 25px;
+    grid-column: span 2;
+  }
+  &__paragraph {
+    @include text;
+    margin-bottom: 20px;
+    grid-column: span 2;
+    line-height: 24px;
+    strong {
+      font-weight: bold;
+      color: $yellow;
+    }
+    @include media("medium") {
+      grid-column: span 1;
+    }
+  }
+  &__button {
+    @include button(90px, 30px, $red);
+    margin-bottom: 20px;
+    justify-self: center;
+  }
+}
