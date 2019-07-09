@@ -2,7 +2,8 @@ $breakpoints: (
   "small": 500px,
   "medium_small": 600px,
   "medium": 800px,
-  "large": 1200px
+  "large": 1200px,
+  "x-large": 1500px
 ) !default;
 
 @mixin media($breakpoint) {
@@ -28,6 +29,8 @@ $breakpoints: (
   font-size: 10px;
   color: white;
   font-family: $sec_font;
+  font-weight: 700;
+  letter-spacing: 1px;
   cursor: pointer;
   &:hover {
     border: 2px solid $color;
@@ -109,4 +112,8 @@ $breakpoints: (
   font-weight: 200;
   color: white;
   line-height: 20px;
+  @include media("large") {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }

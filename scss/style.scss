@@ -51,9 +51,23 @@ input[type="submit"] {
     }
     &--github {
       background-image: url(../img/github.svg);
+      filter: invert(100%);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(1.1);
+        filter: invert(73%) sepia(33%) saturate(1033%) hue-rotate(350deg)
+          brightness(101%) contrast(102%);
+      }
     }
     &--linkedin {
       background-image: url(../img/linkedin.svg);
+      filter: invert(100%);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(1.1);
+        filter: invert(73%) sepia(33%) saturate(1033%) hue-rotate(350deg)
+          brightness(101%) contrast(102%);
+      }
     }
   }
   &__contact {
@@ -105,6 +119,9 @@ input[type="submit"] {
     span {
       color: $red;
     }
+    @include media("medium") {
+      font-size: 30px;
+    }
   }
   &__subtitle {
     font-family: $sec_font;
@@ -113,6 +130,9 @@ input[type="submit"] {
     color: $grey;
     min-width: 120px;
     font-weight: 400;
+    @include media("medium") {
+      font-size: 13px;
+    }
   }
 }
 
@@ -226,12 +246,19 @@ input[type="submit"] {
     grid-column-gap: 80px;
     grid-row-gap: 30px;
   }
+  @include media("x-large") {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
   &__title {
     @include title;
     text-align: center;
     margin-bottom: 25px;
     @include media("medium_small") {
       grid-column: span 2;
+    }
+    @include media("x-large") {
+      grid-column: span 3;
     }
   }
 }
@@ -268,6 +295,28 @@ input[type="submit"] {
       top: -10px;
       background: none;
       border: 1px solid $red;
+    }
+    &:after {
+      content: "live";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba(43, 50, 62, 0.8);
+      @include text;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    &:hover:after {
+      opacity: 1;
     }
   }
   &__title {
@@ -307,9 +356,18 @@ input[type="submit"] {
     height: 20px;
     background-image: url(../img/github.svg);
     background-size: contain;
-    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
     margin-right: 15px;
     z-index: 2;
+    filter: invert(100%);
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.4);
+      filter: invert(73%) sepia(33%) saturate(1033%) hue-rotate(350deg)
+        brightness(101%) contrast(102%);
+    }
   }
 }
 
@@ -410,6 +468,12 @@ input[type="submit"] {
       justify-content: space-evenly;
     }
   }
+  &__form {
+    @include media("medium") {
+      grid-column: 1 / 2;
+      grid-row: 2 / 4;
+    }
+  }
   &__link {
     text-decoration: none;
     font-style: normal;
@@ -421,6 +485,8 @@ input[type="submit"] {
     background-repeat: no-repeat;
     margin-bottom: 25px;
     transition: color 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
     &:active,
     &:visited,
     &:link {
@@ -448,9 +514,7 @@ input[type="submit"] {
   text-transform: uppercase;
   color: #242d3c;
   flex-wrap: wrap;
-  grid-column: 1 / 2;
-  grid-row: 2 / 4;
-
+  margin-bottom: 25px;
   &__item {
     margin-bottom: 15px;
     position: relative;
@@ -462,6 +526,9 @@ input[type="submit"] {
     textarea {
       resize: none;
       line-height: 21px;
+      font-family: $main_font;
+      font-size: 12px;
+      font-weight: 400;
     }
     input,
     textarea {
@@ -522,7 +589,8 @@ input[type="submit"] {
 
 .footer {
   @include text;
-  height: 80px;
+  font-size: 12px;
+  height: 60px;
   background-color: $back_light;
   color: $grey;
   display: flex;
