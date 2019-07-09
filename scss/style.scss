@@ -371,7 +371,153 @@ input[type="submit"] {
   @include media("medium") {
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: repeat(3, auto);
+    grid-column-gap: 30px;
   }
+  @include media("large") {
+    grid-column-gap: 80px;
+  }
+
+  &__title {
+    @include title;
+    text-align: center;
+    margin-bottom: 25px;
+    @include media("medium") {
+      grid-column: span 3;
+    }
+  }
+  &__text {
+    @include text;
+    margin-bottom: 25px;
+    line-height: 25px;
+    @include media("medium") {
+      grid-column: 2 / 4;
+      grid-row: 2 / 3;
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+  }
+  &__details {
+    @include text;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    @include media("medium") {
+      grid-column: 2 / 4;
+      grid-row: 3 / 4;
+    }
+    @include media("large") {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+    &:active,
+    &:visited,
+    &:link {
+      color: white;
+    }
+    &:hover {
+      color: $yellow;
+    }
+    &--mail {
+      background-image: url(../img/envelope_background.svg);
+    }
+    &--phone {
+      background-image: url(../img/phone_background.svg);
+    }
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  font-family: $main_font;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #242d3c;
+  flex-wrap: wrap;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+
+  &__item {
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    input {
+      height: 44px;
+      line-height: 40px;
+    }
+    textarea {
+      resize: none;
+      line-height: 21px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid transparent;
+      &:invalid {
+        border: 1px solid $red;
+        box-shadow: none;
+      }
+      &:focus {
+        border: 1px solid $grey;
+      }
+      &:focus + label {
+        top: -10px;
+        font-size: 8px;
+        color: white;
+        font-weight: 400;
+      }
+      &::placeholder {
+        color: transparent;
+      }
+      &:not(:placeholder-shown) + label {
+        top: -10px;
+        font-size: 8px;
+        color: white;
+        font-weight: 400;
+      }
+    }
+    @include media("small") {
+      &--mail,
+      &--phone {
+        width: 40%;
+        flex: 1;
+      }
+      &--phone {
+        margin-right: 15px;
+      }
+    }
+  }
+  &__label {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    transition: 0.2s ease-out all;
+    cursor: text;
+  }
+  &__submit {
+    @include button(90px, 30px, $yellow);
+  }
+}
+
+.honey-row {
+  display: none;
 }
 
 .footer {

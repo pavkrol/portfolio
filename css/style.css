@@ -466,7 +466,164 @@ input[type="submit"] {
   @media (min-width: 800px) {
     .contact {
       grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: repeat(3, auto); } }
+      grid-template-rows: repeat(3, auto);
+      grid-column-gap: 30px; } }
+  @media (min-width: 1200px) {
+    .contact {
+      grid-column-gap: 80px; } }
+  .contact__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 25px; }
+    .contact__title::first-letter {
+      color: #ff493c; }
+    @media (min-width: 500px) {
+      .contact__title {
+        font-size: 40px; } }
+    @media (min-width: 800px) {
+      .contact__title {
+        font-size: 45px; } }
+    @media (min-width: 1200px) {
+      .contact__title {
+        font-size: 50px; } }
+    @media (min-width: 800px) {
+      .contact__title {
+        grid-column: span 3; } }
+  .contact__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    color: white;
+    line-height: 20px;
+    margin-bottom: 25px;
+    line-height: 25px; }
+    @media (min-width: 800px) {
+      .contact__text {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        line-height: 30px;
+        margin-bottom: 0; } }
+  .contact__details {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    color: white;
+    line-height: 20px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 800px) {
+      .contact__details {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4; } }
+    @media (min-width: 1200px) {
+      .contact__details {
+        flex-direction: row;
+        justify-content: space-evenly; } }
+  .contact__link {
+    text-decoration: none;
+    font-style: normal;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 25px;
+    transition: color 0.3s ease; }
+    .contact__link:active, .contact__link:visited, .contact__link:link {
+      color: white; }
+    .contact__link:hover {
+      color: #ffb820; }
+    .contact__link--mail {
+      background-image: url(../img/envelope_background.svg); }
+    .contact__link--phone {
+      background-image: url(../img/phone_background.svg); }
+
+.form {
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #242d3c;
+  flex-wrap: wrap;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4; }
+  .form__item {
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%; }
+    .form__item input {
+      height: 44px;
+      line-height: 40px; }
+    .form__item textarea {
+      resize: none;
+      line-height: 21px; }
+    .form__item input,
+    .form__item textarea {
+      width: 100%;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid transparent; }
+      .form__item input:invalid,
+      .form__item textarea:invalid {
+        border: 1px solid #ff493c;
+        box-shadow: none; }
+      .form__item input:focus,
+      .form__item textarea:focus {
+        border: 1px solid #989898; }
+      .form__item input:focus + label,
+      .form__item textarea:focus + label {
+        top: -10px;
+        font-size: 8px;
+        color: white;
+        font-weight: 400; }
+      .form__item input::placeholder,
+      .form__item textarea::placeholder {
+        color: transparent; }
+      .form__item input:not(:placeholder-shown) + label,
+      .form__item textarea:not(:placeholder-shown) + label {
+        top: -10px;
+        font-size: 8px;
+        color: white;
+        font-weight: 400; }
+    @media (min-width: 500px) {
+      .form__item--mail, .form__item--phone {
+        width: 40%;
+        flex: 1; }
+      .form__item--phone {
+        margin-right: 15px; } }
+  .form__label {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    transition: 0.2s ease-out all;
+    cursor: text; }
+  .form__submit {
+    width: 90px;
+    height: 30px;
+    border: 1px solid #ffb820;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: white;
+    font-family: "Arimo", sans-serif;
+    cursor: pointer; }
+    .form__submit:hover {
+      border: 2px solid #ffb820; }
+
+.honey-row {
+  display: none; }
 
 .footer {
   font-family: "Raleway", sans-serif;

@@ -269,14 +269,18 @@
         <p class="contact__text">
           Jeśli jesteś zainteresowany współpracą lub masz zlecenie, które
           mógłbym dla Ciebie zrealizować, zapraszam do kontaktu. Wyślij
-          wiadomość za pomocą formularza kontaktowego lub skorzystaj z
-          poniższych danych kontaktowych.
+          wiadomość za pomocą formularza lub skorzystaj z poniższych danych
+          kontaktowych.
         </p>
         <address class="contact__details">
-          <a href="mailto:kontakt@pavkrol.pl" class="contact__email"
+          <a
+            href="mailto:kontakt@pavkrol.pl"
+            class="contact__link contact__link--mail"
             >kontakt@pavkrol.pl</a
           >
-          <a href="tel:+48530671067" class="contact__telephone">530-671-067</a>
+          <a href="tel:+48530671067" class="contact__link contact__link--phone"
+            >530-671-067</a
+          >
         </address>
         <form
           id="contact__form"
@@ -295,9 +299,9 @@
               pattern=".+"
               required
             />
-            <label class="form__label" for="name">Twój adres e-mail</label>
+            <label class="form__label" for="name">Imię / nazwa firmy</label>
           </div>
-          <div class="form__item">
+          <div class="form__item form__item--phone">
             <input
               class="form__input"
               id="form__phone"
@@ -305,20 +309,20 @@
               type="tel"
               placeholder="Numer telefonu"
             />
-            <label class="form__label" for="phone">Twój adres e-mail</label>
+            <label class="form__label" for="phone">Numer telefonu</label>
           </div>
-          <div class="form__item">
+          <div class="form__item form__item--mail">
             <input
               class="form__email"
               id="form__email"
               name="email"
               type="text"
-              placeholder="Twój adres e-mail"
+              placeholder="Adres e-mail"
               data-error="Wpisz poprawny e-mail"
               pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
               required
             />
-            <label class="form__label" for="email">Twój adres e-mail</label>
+            <label class="form__label" for="email">Adres e-mail</label>
           </div>
           <div class="form__item">
             <textarea
@@ -348,7 +352,7 @@
           />
         </form>
       </section>
-      <footer class="footer">&copy;2019 Paweł Król</footer>
+      <footer class="footer">&copy; 2019 Paweł Król</footer>
     </main>
     <script src="./scripts/menu.js"></script>
   </body>
