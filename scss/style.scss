@@ -638,8 +638,11 @@ input[type="submit"] {
 
 .field-error {
   color: $red;
+  font-family: $main_font;
+  font-style: normal;
+  font-weight: normal;
   padding: 10px 0;
-  font-size: 12px;
+  font-size: 9px;
 }
 
 .element-is-busy {
