@@ -20,6 +20,7 @@ input[type="text"],
 input[type="button"],
 input[type="submit"] {
   -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .header {
@@ -643,6 +644,8 @@ input[type="submit"] {
   font-weight: normal;
   padding: 10px 0;
   font-size: 9px;
+  position: absolute;
+  bottom: -23px;
 }
 
 .element-is-busy {

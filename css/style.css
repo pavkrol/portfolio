@@ -14,7 +14,8 @@ input.text,
 input[type="text"],
 input[type="button"],
 input[type="submit"] {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  border-radius: 0; }
 
 .header {
   position: relative;
@@ -760,7 +761,9 @@ input[type="submit"] {
   font-style: normal;
   font-weight: normal;
   padding: 10px 0;
-  font-size: 9px; }
+  font-size: 9px;
+  position: absolute;
+  bottom: -23px; }
 
 .element-is-busy {
   position: relative;
