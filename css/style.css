@@ -18,12 +18,14 @@ input[type="submit"] {
   border-radius: 0; }
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   padding: 0 20px;
   height: 50px;
   display: flex;
   background-color: #2b323e;
-  align-items: center; }
+  align-items: center;
+  z-index: 30; }
   @media (min-width: 800px) {
     .header {
       height: 70px;
@@ -88,15 +90,36 @@ input[type="submit"] {
     border: 1px solid #ff493c;
     border-radius: 50%;
     background: transparent;
+    position: relative;
+    transform: rotate(0deg);
     cursor: pointer; }
     .navigation__menu span {
+      transition: .3s ease-in-out;
       display: block;
+      position: absolute;
       width: 12px;
       height: 1px;
       background-color: #ff493c;
-      margin: 0 auto; }
-      .navigation__menu span:nth-of-type(2) {
-        margin: 3px auto; }
+      margin: 0 auto;
+      transform-origin: left center;
+      left: 5.5px; }
+      .navigation__menu span:nth-child(1) {
+        top: 8px; }
+      .navigation__menu span:nth-child(2) {
+        top: 12px; }
+      .navigation__menu span:nth-child(3) {
+        top: 16px; }
+    .navigation__menu[aria-expanded="true"] span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 7px;
+      left: 7.5px; }
+    .navigation__menu[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0; }
+    .navigation__menu[aria-expanded="true"] span:nth-child(3) {
+      transform: rotate(45deg);
+      transform: rotate(-45deg);
+      top: 16px;
+      left: 7.5px; }
     @media (min-width: 800px) {
       .navigation__menu {
         display: none; } }
@@ -139,7 +162,8 @@ input[type="submit"] {
   background-color: #2b323e;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 0.3s, opacity 0.3s ease; }
+  transition: visibility 0s 0.3s, opacity 0.3s ease;
+  border-bottom: 1px solid #989898; }
   .navigation__list--active {
     visibility: visible;
     opacity: 1;
@@ -162,7 +186,7 @@ input[type="submit"] {
     color: #ff493c; }
 
 .hero {
-  height: calc(100vh - 50px);
+  height: 100vh;
   padding: 0 20px;
   background-color: #2b323e;
   display: flex;
@@ -171,12 +195,12 @@ input[type="submit"] {
   align-items: flex-end; }
   @media (min-width: 800px) {
     .hero {
-      height: calc(100vh - 70px);
+      height: 100vh;
       padding: 0 10%;
       background-position: 20% 100%; } }
   @media (min-width: 1200px) {
     .hero {
-      height: calc(100vh - 100px);
+      height: 100vh;
       padding: 0 15%; } }
   .hero__title {
     font-family: "Raleway", sans-serif;

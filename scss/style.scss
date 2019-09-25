@@ -24,12 +24,14 @@ input[type="submit"] {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   padding: 0 20px;
   height: 50px;
   display: flex;
   background-color: $back_light;
   align-items: center;
+  z-index: 30;
   @include media("medium") {
     height: 70px;
     padding: 0 10%;
@@ -88,16 +90,42 @@ input[type="submit"] {
     border: 1px solid $red;
     border-radius: 50%;
     background: transparent;
+    position: relative;
+    transform: rotate(0deg);
     cursor: pointer;
     span {
+      transition: .3s ease-in-out;
       display: block;
+      position: absolute;
       width: 12px;
       height: 1px;
       background-color: $red;
       margin: 0 auto;
-      &:nth-of-type(2) {
-        margin: 3px auto;
+      transform-origin: left center;
+      left: 5.5px;
+      &:nth-child(1) {
+        top: 8px;  
       }
+      &:nth-child(2) {
+        top: 12px;  
+      }
+      &:nth-child(3) {
+        top: 16px;
+      }
+    }
+    &[aria-expanded="true"] span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 7px;
+      left: 7.5px;
+    }
+    &[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+    &[aria-expanded="true"] span:nth-child(3) {
+      transform: rotate(45deg);
+      transform: rotate(-45deg);
+      top: 16px;
+      left: 7.5px;
     }
     @include media("medium") {
       display: none;
@@ -149,6 +177,7 @@ input[type="submit"] {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.3s, opacity 0.3s ease;
+    border-bottom: 1px solid $grey;
     &--active {
       visibility: visible;
       opacity: 1;
@@ -175,7 +204,7 @@ input[type="submit"] {
 }
 
 .hero {
-  height: calc(100vh - 50px);
+  height: 100vh;
   padding: 0 20px;
   background-color: $back_light;
   display: flex;
