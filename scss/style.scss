@@ -211,18 +211,85 @@ input[type="submit"] {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  //background-image: url(../img/person_shadow.png);
-  //background-position: bottom center;
-  //background-repeat: no-repeat;
-  //background-size: 60vh;
+  flex-wrap: wrap;
   @include media("medium") {
-    height: calc(100vh - 70px);
     padding: 0 10%;
-    background-position: 20% 100%;
   }
   @include media("large") {
-    height: calc(100vh - 100px);
     padding: 0 15%;
+  }
+  &__logo_list {
+    display: none;
+    @include media("large") {
+      display: grid;
+      grid-gap: 50px 30px;
+      list-style: none;
+      height: 100vh;
+      justify-content: start;
+      align-content: center;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 80px);
+    }
+  }
+  &__item {
+    position: relative;
+    &--double {
+      grid-column: span 2;
+    }
+    &:after {
+      display: none;
+    }
+    &:hover:after {
+      display: block;
+      width: 80px;
+      height: 20px;
+      line-height: 20px;
+      position: absolute;
+      bottom: -30px;
+      text-align: center;
+      font-family: $main_font;
+      color: white;
+      font-weight: 500;
+    }
+    
+  &:nth-child(1):after {
+    content: "HTML"
+  }
+  &:nth-child(2):after {
+    content: "CSS"
+  }
+  &:nth-child(3):after {
+    content: "JavaScript"
+  }
+  &:nth-child(4):after {
+    content: "React"
+  }
+  &:nth-child(5):after {
+    content: "SCSS"
+  }
+  &:nth-child(6):after {
+    content: "Webpack"
+  }
+  &:nth-child(7):after {
+    content: "GIT"
+  }
+  &:nth-child(8):after {
+    content: "Figma"
+  }
+  &:nth-child(9):after {
+    content: "Adobe XD"
+  }
+  }
+  &__logo {
+    width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(80%);
+    transition: all 0.15s ease-in;
+    &:hover {
+      transform: scale(1.1);
+      filter: grayscale(0);
+    }
   }
   &__title {
     @include title;
@@ -407,15 +474,6 @@ input[type="submit"] {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto);
-  @include media("medium") {
-    background-image: url(../img/about_background.png);
-    background-repeat: no-repeat;
-    background-position: center 91%;
-    background-size: 55%;
-  }
-  @include media("large") {
-    background-position: center 96%;
-  }
   &__title {
     @include title;
     text-align: center;

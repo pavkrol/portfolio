@@ -192,16 +192,70 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end; }
+  align-items: flex-end;
+  flex-wrap: wrap; }
   @media (min-width: 800px) {
     .hero {
-      height: 100vh;
-      padding: 0 10%;
-      background-position: 20% 100%; } }
+      padding: 0 10%; } }
   @media (min-width: 1200px) {
     .hero {
-      height: 100vh;
       padding: 0 15%; } }
+  .hero__logo_list {
+    display: none; }
+    @media (min-width: 1200px) {
+      .hero__logo_list {
+        display: grid;
+        grid-gap: 50px 30px;
+        list-style: none;
+        height: 100vh;
+        justify-content: start;
+        align-content: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 80px); } }
+  .hero__item {
+    position: relative; }
+    .hero__item--double {
+      grid-column: span 2; }
+    .hero__item:after {
+      display: none; }
+    .hero__item:hover:after {
+      display: block;
+      width: 80px;
+      height: 20px;
+      line-height: 20px;
+      position: absolute;
+      bottom: -30px;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      color: white;
+      font-weight: 500; }
+    .hero__item:nth-child(1):after {
+      content: "HTML"; }
+    .hero__item:nth-child(2):after {
+      content: "CSS"; }
+    .hero__item:nth-child(3):after {
+      content: "JavaScript"; }
+    .hero__item:nth-child(4):after {
+      content: "React"; }
+    .hero__item:nth-child(5):after {
+      content: "SCSS"; }
+    .hero__item:nth-child(6):after {
+      content: "Webpack"; }
+    .hero__item:nth-child(7):after {
+      content: "GIT"; }
+    .hero__item:nth-child(8):after {
+      content: "Figma"; }
+    .hero__item:nth-child(9):after {
+      content: "Adobe XD"; }
+  .hero__logo {
+    width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(80%);
+    transition: all 0.15s ease-in; }
+    .hero__logo:hover {
+      transform: scale(1.1);
+      filter: grayscale(0); }
   .hero__title {
     font-family: "Raleway", sans-serif;
     font-size: 35px;
@@ -282,7 +336,7 @@ input[type="submit"] {
         width: 515px; } }
 
 .portfolio {
-  padding: 20px 25px;
+  padding: 50px 25px 20px 25px;
   background-color: #1b222e;
   display: grid;
   grid-template-columns: 1fr;
@@ -458,7 +512,7 @@ input[type="submit"] {
       filter: invert(73%) sepia(33%) saturate(1033%) hue-rotate(350deg) brightness(101%) contrast(102%); }
 
 .about {
-  padding: 20px 25px;
+  padding: 50px 25px 20px 25px;
   background-color: #2b323e;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -469,15 +523,6 @@ input[type="submit"] {
   @media (min-width: 1200px) {
     .about {
       padding: 70px 15%; } }
-  @media (min-width: 800px) {
-    .about {
-      background-image: url(../img/about_background.png);
-      background-repeat: no-repeat;
-      background-position: center 91%;
-      background-size: 55%; } }
-  @media (min-width: 1200px) {
-    .about {
-      background-position: center 96%; } }
   .about__title {
     font-family: "Raleway", sans-serif;
     font-size: 35px;
@@ -543,7 +588,7 @@ input[type="submit"] {
       border: 2px solid #ff493c; }
 
 .contact {
-  padding: 20px 25px;
+  padding: 50px 25px 20px 25px;
   background-color: #1b222e;
   display: grid;
   grid-template-columns: 1fr;
