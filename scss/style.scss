@@ -32,6 +32,7 @@ input[type="submit"] {
   background-color: $back_light;
   align-items: center;
   z-index: 30;
+  transition: height 0.2s ease-in-out;
   @include media("medium") {
     height: 70px;
     padding: 0 10%;
@@ -39,6 +40,11 @@ input[type="submit"] {
   @include media("large") {
     height: 100px;
     padding: 0 15%;
+  }
+  &--small {
+    @include media("large") {
+      height: 70px;
+    }
   }
   &__link {
     display: block;

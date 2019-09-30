@@ -25,7 +25,8 @@ input[type="submit"] {
   display: flex;
   background-color: #2b323e;
   align-items: center;
-  z-index: 30; }
+  z-index: 30;
+  transition: height 0.2s ease-in-out; }
   @media (min-width: 800px) {
     .header {
       height: 70px;
@@ -34,6 +35,9 @@ input[type="submit"] {
     .header {
       height: 100px;
       padding: 0 15%; } }
+  @media (min-width: 1200px) {
+    .header--small {
+      height: 70px; } }
   .header__link {
     display: block;
     width: 20px;
