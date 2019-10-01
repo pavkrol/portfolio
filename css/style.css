@@ -729,10 +729,6 @@ input[type="submit"] {
       padding: 10px;
       background-color: white;
       border: 1px solid transparent; }
-      .form__item input:invalid,
-      .form__item textarea:invalid {
-        border: 1px solid #ff493c;
-        box-shadow: none; }
       .form__item input:focus,
       .form__item textarea:focus {
         border: 1px solid #989898;
