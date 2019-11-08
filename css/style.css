@@ -98,7 +98,7 @@ input[type="submit"] {
     transform: rotate(0deg);
     cursor: pointer; }
     .navigation__menu span {
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
       display: block;
       position: absolute;
       width: 12px;
@@ -248,8 +248,12 @@ input[type="submit"] {
     .hero__item:nth-child(7):after {
       content: "GIT"; }
     .hero__item:nth-child(8):after {
-      content: "Figma"; }
+      content: "Gatsby"; }
     .hero__item:nth-child(9):after {
+      content: "GraphQL"; }
+    .hero__item:nth-child(10):after {
+      content: "Figma"; }
+    .hero__item:nth-child(11):after {
       content: "Adobe XD"; }
   .hero__logo {
     width: 80px;
@@ -444,9 +448,11 @@ input[type="submit"] {
       @media (min-width: 1200px) {
         .project__photo:after {
           font-size: 16px;
-          line-height: 22px; } }
+          line-height: 30px; } }
     .project__photo:hover:after {
       opacity: 1; }
+    .project__photo--disabled:after {
+      content: ""; }
   .project__title {
     font-family: "Raleway", sans-serif;
     font-size: 16px;
@@ -479,7 +485,7 @@ input[type="submit"] {
     @media (min-width: 1200px) {
       .project__description {
         font-size: 16px;
-        line-height: 22px; } }
+        line-height: 30px; } }
   .project__technologies {
     list-style: none;
     display: flex;
@@ -560,12 +566,12 @@ input[type="submit"] {
     font-weight: 200;
     color: white;
     line-height: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     line-height: 24px; }
     @media (min-width: 1200px) {
       .about__paragraph {
         font-size: 16px;
-        line-height: 22px; } }
+        line-height: 30px; } }
     .about__paragraph strong {
       font-weight: bold;
       color: #ffb820; }
@@ -643,7 +649,7 @@ input[type="submit"] {
     @media (min-width: 1200px) {
       .contact__text {
         font-size: 16px;
-        line-height: 22px; } }
+        line-height: 30px; } }
     @media (min-width: 800px) {
       .contact__text {
         grid-column: 2 / 4;
@@ -662,7 +668,7 @@ input[type="submit"] {
     @media (min-width: 1200px) {
       .contact__details {
         font-size: 16px;
-        line-height: 22px; } }
+        line-height: 30px; } }
     @media (min-width: 800px) {
       .contact__details {
         grid-column: 2 / 4;
@@ -878,4 +884,4 @@ input[type="submit"] {
   @media (min-width: 1200px) {
     .footer {
       font-size: 16px;
-      line-height: 22px; } }
+      line-height: 30px; } }

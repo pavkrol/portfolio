@@ -100,7 +100,7 @@ input[type="submit"] {
     transform: rotate(0deg);
     cursor: pointer;
     span {
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
       display: block;
       position: absolute;
       width: 12px;
@@ -110,10 +110,10 @@ input[type="submit"] {
       transform-origin: left center;
       left: 5.5px;
       &:nth-child(1) {
-        top: 8px;  
+        top: 8px;
       }
       &:nth-child(2) {
-        top: 12px;  
+        top: 12px;
       }
       &:nth-child(3) {
         top: 16px;
@@ -257,34 +257,40 @@ input[type="submit"] {
       color: white;
       font-weight: 500;
     }
-    
-  &:nth-child(1):after {
-    content: "HTML"
-  }
-  &:nth-child(2):after {
-    content: "CSS"
-  }
-  &:nth-child(3):after {
-    content: "JavaScript"
-  }
-  &:nth-child(4):after {
-    content: "React"
-  }
-  &:nth-child(5):after {
-    content: "SCSS"
-  }
-  &:nth-child(6):after {
-    content: "Webpack"
-  }
-  &:nth-child(7):after {
-    content: "GIT"
-  }
-  &:nth-child(8):after {
-    content: "Figma"
-  }
-  &:nth-child(9):after {
-    content: "Adobe XD"
-  }
+
+    &:nth-child(1):after {
+      content: "HTML";
+    }
+    &:nth-child(2):after {
+      content: "CSS";
+    }
+    &:nth-child(3):after {
+      content: "JavaScript";
+    }
+    &:nth-child(4):after {
+      content: "React";
+    }
+    &:nth-child(5):after {
+      content: "SCSS";
+    }
+    &:nth-child(6):after {
+      content: "Webpack";
+    }
+    &:nth-child(7):after {
+      content: "GIT";
+    }
+    &:nth-child(8):after {
+      content: "Gatsby";
+    }
+    &:nth-child(9):after {
+      content: "GraphQL";
+    }
+    &:nth-child(10):after {
+      content: "Figma";
+    }
+    &:nth-child(11):after {
+      content: "Adobe XD";
+    }
   }
   &__logo {
     width: 80px;
@@ -421,6 +427,9 @@ input[type="submit"] {
     &:hover:after {
       opacity: 1;
     }
+    &--disabled:after {
+      content: "";
+    }
   }
   &__title {
     @include second_subtitle;
@@ -497,7 +506,7 @@ input[type="submit"] {
   }
   &__paragraph {
     @include text;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     line-height: 24px;
     strong {
       font-weight: bold;
