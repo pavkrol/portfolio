@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="Description"
+      content="Personal portfolio page designed and implemented by Paweł Król"
+    />
     <title>Paweł Król | Web Developer</title>
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700&display=swap"
@@ -64,17 +68,47 @@
     <main>
       <section class="hero">
         <ul class="hero__logo_list">
-          <li class="hero__item"><img class="hero__logo" src="./img/html.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/css.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/js.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/react.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/sass.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/webpack.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/git.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/gatsby.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/graphql.png"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/figma.svg"></li>
-          <li class="hero__item"><img class="hero__logo" src="./img/xd.png"></li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/html.png" alt="html logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/css.png" alt="css logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/js.png" alt="js logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/react.png" alt="react logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/sass.png" alt="sass logo" />
+          </li>
+          <li class="hero__item">
+            <img
+              class="hero__logo"
+              src="./img/webpack.png"
+              alt="webpack logo"
+            />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/git.png" alt="git logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/gatsby.png" alt="gatsby logo" />
+          </li>
+          <li class="hero__item">
+            <img
+              class="hero__logo"
+              src="./img/graphql.png"
+              alt="graphql logo"
+            />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/figma.svg" alt="figma logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/xd.png" alt="adobe xd logo" />
+          </li>
         </ul>
         <h3 class="hero__title">Cześć</h3>
         <h4 class="hero__subtitle">Mam na imię Paweł</h4>
@@ -120,6 +154,35 @@
         <article class="portfolio__project project">
           <a
             class="project__photo"
+            href="https://yahtzee-dice-game.netlify.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./img/yahtzee.jpg" alt="screenshot of yahtzee game app" />
+          </a>
+          <h4 class="project__title">Yahtzee | Dice Game</h4>
+          <p class="project__description">
+            Gra w kości - Yahtzee. W pierwszej wersji jest możliwośc rozegrania
+            rundy przez jednego gracza. Aplikacja została napisana w React. Do
+            stylowania komponentów wykorzystałem Styled Components. Jako bundler
+            użyłem Webpack'a.
+          </p>
+          <ul class="project__technologies">
+            <li>React</li>
+            <li>Styled Components</li>
+            <li>Webpack</li>
+          </ul>
+          <a
+            class="project__github"
+            href="https://github.com/pavkrol/yahtzee"
+            aria-label="link to github repository"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </article>
+        <article class="portfolio__project project">
+          <a
+            class="project__photo"
             href="https://vigorous-dijkstra-020e56.netlify.com/"
             target="_blank"
             rel="noopener"
@@ -131,7 +194,10 @@
           </a>
           <h4 class="project__title">Coffee Republic</h4>
           <p class="project__description">
-            Przykładowa strona internetowa fikcyjnej kawiarni. Strona w całości zaprojektowana przeze mnie i stworzona przy pomocy GatsbyJS i GraphQL. Strony poszczególnych postów w blogu są generowane automatycznie na podstawie plików MD. 
+            Przykładowa strona internetowa fikcyjnej kawiarni. Strona w całości
+            zaprojektowana przeze mnie i stworzona przy pomocy GatsbyJS i
+            GraphQL. Strony poszczególnych postów w blogu są generowane
+            automatycznie na podstawie plików MD.
           </p>
           <ul class="project__technologies">
             <li>React</li>
@@ -141,31 +207,6 @@
           <a
             class="project__github"
             href="https://github.com/pavkrol/cafe-website"
-            aria-label="link to github repository"
-            target="_blank"
-            rel="noopener"
-          ></a>
-        </article>
-        <article class="portfolio__project project">
-          <div class="project__photo project__photo--disabled">
-            <img
-              src="./img/et_app.jpg"
-              alt="screenshot of ET App application"
-            />
-          </div>
-          <h4 class="project__title">ET App</h4>
-          <p class="project__description">
-            Aplikacja napisana w React, która umożliwia prowadzenie prostej księgowości - wyliczanie podatków, ewidencję przychodów i wydatków. Projekt jest nadal w trakcie tworzenia, jednak już teraz zachęcam do zapoznania się z jego aktualnym kodem na github.
-            Do zarządania stanem aplikacji wykorzystałem Context API. Używam w niej także Styled Components, React Spring i Reach Router.
-          </p>
-          <ul class="project__technologies">
-            <li>React</li>
-            <li>Webpack</li>
-            <li>Styled Components</li>
-          </ul>
-          <a
-            class="project__github"
-            href="https://github.com/pavkrol/et-app"
             aria-label="link to github repository"
             target="_blank"
             rel="noopener"
@@ -203,7 +244,12 @@
           ></a>
         </article>
         <article class="portfolio__project project">
-          <a class="project__photo" href="https://pavkrol.github.io/fusion" target="_blank" rel="noopener">
+          <a
+            class="project__photo"
+            href="https://pavkrol.github.io/fusion"
+            target="_blank"
+            rel="noopener"
+          >
             <img
               src="./img/project_fusion.jpg"
               alt="screenshot of Fusion project website"
@@ -212,9 +258,8 @@
           <h4 class="project__title">Fusion</h4>
           <p class="project__description">
             Przykładowa strona zaimplementowana na podstawie pliku PSD. Napisana
-            z wykorzystaniem preprocesora SCSS oraz JS. Zawiera ciekawe
-            efekty przejścia, animacje oraz slider napisany od podstaw w
-            JavaScript.
+            z wykorzystaniem preprocesora SCSS oraz JS. Zawiera ciekawe efekty
+            przejścia, animacje oraz slider napisany od podstaw w JavaScript.
           </p>
           <ul class="project__technologies">
             <li>SCSS</li>
@@ -231,7 +276,12 @@
         </article>
 
         <article class="portfolio__project project">
-          <a class="project__photo" href="https://pavkrol.github.io/photography-website-example" target="_blank" rel="noopener">
+          <a
+            class="project__photo"
+            href="https://pavkrol.github.io/photography-website-example"
+            target="_blank"
+            rel="noopener"
+          >
             <img
               src="./img/project_photography.jpg"
               alt="screenshot of MariAnna Photography project website"
@@ -258,7 +308,12 @@
           ></a>
         </article>
         <article class="portfolio__project project">
-          <a class="project__photo" href="https://pavkrol.github.io/top-designers" target="_blank" rel="noopener">
+          <a
+            class="project__photo"
+            href="https://pavkrol.github.io/top-designers"
+            target="_blank"
+            rel="noopener"
+          >
             <img
               src="./img/project_designers.jpg"
               alt="screenshot of Fusion project website"
@@ -296,7 +351,9 @@
             Ukończyłem studia na kierunku ekonomia w Wyższej Szkole Bankowej w
             Gdyni. W trakcie swojej kariery zawodowej przez wiele lat pracowałem
             w banku. Po zakończeniu przygody z bankowością postanowiłem
-            kształcić się w kierunku web developmentu. Szczegóły dotyczące mojej dotychczasowej kariery zawodowej zamieściłem w CV (do pobrania poniżej) oraz na moim profilu Linkedin.
+            kształcić się w kierunku web developmentu. Szczegóły dotyczące mojej
+            dotychczasowej kariery zawodowej zamieściłem w CV (do pobrania
+            poniżej) oraz na moim profilu Linkedin.
           </p>
           <p class="about__paragraph">
             W swoich projektach staram się używać poprawnego i semantycznego
@@ -306,9 +363,13 @@
             <strong>JavaScript'em</strong>, z wykorzystaniem najnowszych
             standardów, zarówno do tworzenia prostych interakcji na stronie, jak
             również do bardziej skomplikowanych zadań. Obecnie kładę nacisk
-            głównie na naukę <strong>React'a</strong> i w tym kierunku
-            planuję się dalej rozwijać. Do tworzenia wizualnej strony własnych projektów
-            wykorzystuję najczęściej aplikację <strong>Figma</strong>, znam również Adobe Photoshop i Adobe XD. W swoich projektach wykorzystuję proste konfiguracje utworzone w <strong>Webpack'u</strong>. Potrafię wykorzystać możliwości <strong>GatsbyJS</strong> i <strong>GraphQL</strong>.
+            głównie na naukę <strong>React'a</strong> i w tym kierunku planuję
+            się dalej rozwijać. Do tworzenia wizualnej strony własnych projektów
+            wykorzystuję najczęściej aplikację <strong>Figma</strong>, znam
+            również Adobe Photoshop i Adobe XD. W swoich projektach wykorzystuję
+            proste konfiguracje utworzone w <strong>Webpack'u</strong>. Potrafię
+            wykorzystać możliwości <strong>GatsbyJS</strong> i
+            <strong>GraphQL</strong>.
           </p>
           <p class="about__paragraph">
             Swobodnie posługuję się językiem angielskim (w mowie i w piśmie).
@@ -318,12 +379,13 @@
             Zachęcam do zapoznania się z moim repozytorium Github.
           </p>
         </section>
-        <a 
-          href="./docs/CV_Paweł Król.pdf" 
-          class="about__button" 
-          aria-label="CV download link" 
+        <a
+          href="./docs/CV_Paweł Król.pdf"
+          class="about__button"
+          aria-label="CV download link"
           target="_blank"
-          rel="noopener">
+          rel="noopener"
+        >
           CV
         </a>
         <a
@@ -331,9 +393,10 @@
           class="about__button"
           aria-label="github link"
           target="_blank"
-          rel="noopener">
+          rel="noopener"
+        >
           GITHUB
-        </a        >
+        </a>
       </section>
       <section id="contact" class="contact">
         <h3 class="contact__title">Kontakt</h3>
@@ -370,7 +433,9 @@
               pattern=".+"
               required
             />
-            <label class="form__label" for="name">Imię / nazwa firmy</label>
+            <label class="form__label" for="form__name"
+              >Imię / nazwa firmy</label
+            >
           </div>
           <div class="form__item form__item--phone">
             <input
@@ -380,7 +445,7 @@
               type="tel"
               placeholder="Numer telefonu"
             />
-            <label class="form__label" for="phone">Numer telefonu</label>
+            <label class="form__label" for="form__phone">Numer telefonu</label>
           </div>
           <div class="form__item form__item--mail">
             <input
@@ -393,7 +458,7 @@
               pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
               required
             />
-            <label class="form__label" for="email">Adres e-mail</label>
+            <label class="form__label" for="form__email">Adres e-mail</label>
           </div>
           <div class="form__item">
             <textarea
