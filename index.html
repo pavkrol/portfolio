@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header fade_in">
       <div class="header__logo logo">
         <h1 class="logo__title"><span>P</span>aweł <span>K</span>ról</h1>
         <h2 class="logo__subtitle">Web Developer</h2>
@@ -67,7 +67,7 @@
     </header>
     <main>
       <section class="hero">
-        <ul class="hero__logo_list">
+        <ul class="hero__logo_list fade_in">
           <li class="hero__item">
             <img class="hero__logo" src="./img/html.png" alt="html logo" />
           </li>
@@ -110,16 +110,16 @@
             <img class="hero__logo" src="./img/xd.png" alt="adobe xd logo" />
           </li>
         </ul>
-        <h3 class="hero__title">Cześć</h3>
-        <h4 class="hero__subtitle">Mam na imię Paweł</h4>
-        <p class="hero__text">
+        <h3 class="hero__title fade_in">Cześć</h3>
+        <h4 class="hero__subtitle fade_in">Mam na imię Paweł</h4>
+        <p class="hero__text fade_in">
           Poniżej znajdziesz kilka projektów, które wykonałem oraz więcej
           informacji o mnie
         </p>
       </section>
-      <section id="portfolio" class="portfolio">
-        <h3 class="portfolio__title">Portfolio</h3>
-        <article class="portfolio__project project">
+      <section id="portfolio" class="portfolio ">
+        <h3 class="portfolio__title hidden">Portfolio</h3>
+        <article class="portfolio__project project hidden">
           <a
             class="project__photo"
             href="https://angaz.com.pl"
@@ -151,7 +151,7 @@
             rel="noopener"
           ></a>
         </article>
-        <article class="portfolio__project project">
+        <article class="portfolio__project project hidden">
           <a
             class="project__photo"
             href="https://yahtzee-dice-game.netlify.com/"
@@ -180,7 +180,7 @@
             rel="noopener"
           ></a>
         </article>
-        <article class="portfolio__project project">
+        <article class="portfolio__project project hidden">
           <a
             class="project__photo"
             href="https://vigorous-dijkstra-020e56.netlify.com/"
@@ -212,7 +212,7 @@
             rel="noopener"
           ></a>
         </article>
-        <article class="portfolio__project project">
+        <article class="portfolio__project project hidden">
           <a
             class="project__photo"
             href="https://eventify.netlify.com/"
@@ -243,7 +243,7 @@
             rel="noopener"
           ></a>
         </article>
-        <article class="portfolio__project project">
+        <article class="portfolio__project project hidden">
           <a
             class="project__photo"
             href="https://pavkrol.github.io/fusion"
@@ -275,7 +275,7 @@
           ></a>
         </article>
 
-        <article class="portfolio__project project">
+        <article class="portfolio__project project hidden">
           <a
             class="project__photo"
             href="https://pavkrol.github.io/photography-website-example"
@@ -307,7 +307,7 @@
             rel="noopener"
           ></a>
         </article>
-        <article class="portfolio__project project">
+        <article class="portfolio__project project hidden">
           <a
             class="project__photo"
             href="https://pavkrol.github.io/top-designers"
@@ -341,8 +341,8 @@
         </article>
       </section>
       <section id="about" class="about">
-        <h3 class="about__title">O mnie</h3>
-        <section class="about__text">
+        <h3 class="about__title hidden">O mnie</h3>
+        <section class="about__text hidden">
           <p class="about__paragraph">
             <strong
               >Mam na imię Paweł i jestem Front-end Developerem z
@@ -399,14 +399,14 @@
         </a>
       </section>
       <section id="contact" class="contact">
-        <h3 class="contact__title">Kontakt</h3>
-        <p class="contact__text">
+        <h3 class="contact__title hidden">Kontakt</h3>
+        <p class="contact__text hidden">
           Jeśli jesteś zainteresowany współpracą lub masz zlecenie, które
           mógłbym dla Ciebie zrealizować, zapraszam do kontaktu. Wyślij
           wiadomość za pomocą formularza lub skorzystaj z poniższych danych
           kontaktowych.
         </p>
-        <address class="contact__details">
+        <address class="contact__details hidden">
           <a
             href="mailto:kontakt@pavkrol.pl"
             class="contact__link contact__link--mail"
@@ -420,7 +420,7 @@
           id="contact__form"
           action="scripts/send.php"
           method="post"
-          class="contact__form form"
+          class="contact__form form hidden"
         >
           <div class="form__item">
             <input
@@ -493,5 +493,6 @@
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/contact_form.js"></script>
     <script src="./scripts/small_header.js"></script>
+    <script src="./scripts/fadein.js"></script>
   </body>
 </html>
