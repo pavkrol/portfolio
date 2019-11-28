@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="Description"
+      content="Personal portfolio page designed and implemented by Paweł Król"
+    />
+    <title>Paweł Król | Web Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header fade_in">
+      <div class="header__logo logo">
+        <h1 class="logo__title"><span>P</span>aweł <span>K</span>ról</h1>
+        <h2 class="logo__subtitle">Web Developer</h2>
+      </div>
+      <a
+        href="https://github.com/pavkrol"
+        class="header__link header__link--github"
+        aria-label="github link"
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/pawe%C5%82-kr%C3%B3l-1aa14797/"
+        class="header__link header__link--linkedin"
+        aria-label="linkedin link"
+      ></a>
+      <a href="#contact__form" class="header__contact">
+        Contact
+      </a>
+      <nav id="navigation" class="header__navigation navigation">
+        <button
+          id="navigation__menu"
+          class="navigation__menu"
+          type="button"
+          aria-label="menu"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="navigation__list" class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#about">About</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <ul class="hero__logo_list fade_in">
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/html.png" alt="html logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/css.png" alt="css logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/js.png" alt="js logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/react.png" alt="react logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/sass.png" alt="sass logo" />
+          </li>
+          <li class="hero__item">
+            <img
+              class="hero__logo"
+              src="./img/webpack.png"
+              alt="webpack logo"
+            />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/git.png" alt="git logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/gatsby.png" alt="gatsby logo" />
+          </li>
+          <li class="hero__item">
+            <img
+              class="hero__logo"
+              src="./img/graphql.png"
+              alt="graphql logo"
+            />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/figma.svg" alt="figma logo" />
+          </li>
+          <li class="hero__item">
+            <img class="hero__logo" src="./img/xd.png" alt="adobe xd logo" />
+          </li>
+        </ul>
+        <h3 class="hero__title fade_in">Hello</h3>
+        <h4 class="hero__subtitle fade_in">My name is Paweł</h4>
+        <p class="hero__text fade_in">
+          You can find some of my projects and more information about me below.
+        </p>
+      </section>
+      <section id="portfolio" class="portfolio ">
+        <h3 class="portfolio__title hidden">Portfolio</h3>
+        <article class="portfolio__project project hidden">
+          <a
+            class="project__photo"
+            href="https://angaz.com.pl"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./img/project_angaz.jpg"
+              alt="screenshot of website for local company AN-GAZ"
+            />
+          </a>
+          <h4 class="project__title">AN-GAZ Dystrybucja Gazu</h4>
+          <p class="project__description">
+            One-page website for a local gas delivery company. I designed it all by myself. I used the mobile-first approach, SCSS preprocessor and BEM methodology. 
+          </p>
+          <ul class="project__technologies">
+            <li>SCSS</li>
+            <li>BEM</li>
+            <li>JS</li>
+          </ul>
+          <a
+            class="project__github"
+            href="https://github.com/pavkrol/angaz-company-website"
+            aria-label="link to github repository"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </article>
+        <article class="portfolio__project project hidden">
+          <a
+            class="project__photo"
+            href="https://yahtzee-dice-game.netlify.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./img/yahtzee.jpg" alt="screenshot of yahtzee game app" />
+          </a>
+          <h4 class="project__title">Yahtzee | Dice Game</h4>
+          <p class="project__description">
+            My version of popular dice game - Yahtzee. It's the first version of the game, where one player can play a single round. This application was written in React. I used styled-components for styling and Webpack as a bundler.
+          </p>
+          <ul class="project__technologies">
+            <li>React</li>
+            <li>Styled Components</li>
+            <li>Webpack</li>
+          </ul>
+          <a
+            class="project__github"
+            href="https://github.com/pavkrol/yahtzee"
+            aria-label="link to github repository"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </article>
+        <article class="portfolio__project project hidden">
+          <a
+            class="project__photo"
+            href="https://vigorous-dijkstra-020e56.netlify.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./img/coffeerepublic.jpg"
+              alt="screenshot of fictional cafe website"
+            />
+          </a>
+          <h4 class="project__title">Coffee Republic</h4>
+          <p class="project__description">
+            An example of a fictional cafe website. I designed and created it by myself using GatsbyJS and GraphQL. The individual posts pages are generated automatically from markdown files.
+          </p>
+          <ul class="project__technologies">
+            <li>React</li>
+            <li>Gatsby</li>
+            <li>GraphQL</li>
+          </ul>
+          <a
+            class="project__github"
+            href="https://github.com/pavkrol/cafe-website"
+            aria-label="link to github repository"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </article>
+        <article class="portfolio__project project hidden">
+          <a
+            class="project__photo"
+            href="https://eventify.netlify.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./img/project_eventify.jpg"
+              alt="screenshot of Eventify application"
+            />
+          </a>
+          <h4 class="project__title">Eventify</h4>
+          <p class="project__description">
+            Simple application allowing to search for concerts of a specific artist or every concert in the exact city. Users can also buy a ticket for the chosen concert (application redirect to a seller website). The data is fetched from the Songkick API. This is my first application written in React.
+          </p>
+          <ul class="project__technologies">
+            <li>React</li>
+            <li>JS</li>
+          </ul>
+          <a
+            class="project__github"
+            href="https://github.com/pavkrol/music-events-search"
+            aria-label="link to github repository"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </article>
+        <article class="portfolio__project project hidden">
+          <a
+            class="project__photo"
+            href="https://pavkrol.github.io/fusion"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./img/project_fusion.jpg"
+              alt="screenshot of Fusion project website"
+            />
+          </a>
+          <h4 class="project__title">Fusion</h4>
+          <p class="project__description">
+            Przykładowa strona zaimplementowana na podstawie pliku PSD. Napisana
+            z wykorzystaniem preprocesora SCSS oraz JS. Zawiera ciekawe efekty
+            przejścia, animacje oraz slider napisany od podstaw w JavaScript.
+          </p>
+          <ul class="project__technologies">
+            <li>SCSS</li>
+            <li>JS</li>
+            <li>PSD to HTML</li>
+          </ul>
+          <a
+            class="project__github"
+            href="https://github.com/pavkrol/fusion"
+            aria-label="link to github repository"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </article>
+
+        <article class="portfolio__project project hidden">
+          <a
+            class="project__photo"
+            href="https://pavkrol.github.io/photography-website-example"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./img/project_photography.jpg"
+              alt="screenshot of MariAnna Photography project website"
+            />
+          </a>
+          <h4 class="project__title">MariAnna Photography</h4>
+          <p class="project__description">
+            Przykładowa strona zaimplementowana na podstawie pliku PSD.
+            Zakodowana w czystym CSS i JavaScript. Praca nad tą stroną pozwoliła
+            mi m.in. wykorzystać możliwości grid'a w zakresie responsywnej
+            galerii zdjęć.
+          </p>
+          <ul class="project__technologies">
+            <li>CSS</li>
+            <li>JS</li>
+            <li>PSD to HTML</li>
+          </ul>
+          <a
+            class="project__github"
+            href="https://github.com/pavkrol/photography-website-example"
+            aria-label="link to github repository"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </article>
+        <article class="portfolio__project project hidden">
+          <a
+            class="project__photo"
+            href="https://pavkrol.github.io/top-designers"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./img/project_designers.jpg"
+              alt="screenshot of Fusion project website"
+            />
+          </a>
+          <h4 class="project__title">Top Designers</h4>
+          <p class="project__description">
+            Przykładowa strona zaimplementowana na podstawie darmowego pliku
+            PSD. Zakodowana w czystym CSS i JavaScript. Okrągłe progress bar'y
+            zostały napisane w JavaScript bez wykorzystania zewnętrznych
+            bibliotek.
+          </p>
+          <ul class="project__technologies">
+            <li>CSS</li>
+            <li>JS</li>
+            <li>PSD to HTML</li>
+          </ul>
+          <a
+            class="project__github"
+            href="https://github.com/pavkrol/top-designers"
+            aria-label="link to github repository"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </article>
+      </section>
+      <section id="about" class="about">
+        <h3 class="about__title hidden">O mnie</h3>
+        <section class="about__text hidden">
+          <p class="about__paragraph">
+            <strong
+              >Mam na imię Paweł i jestem Front-end Developerem z
+              Gdańska.</strong
+            >
+            Ukończyłem studia na kierunku ekonomia w Wyższej Szkole Bankowej w
+            Gdyni. W trakcie swojej kariery zawodowej przez wiele lat pracowałem
+            w banku. Po zakończeniu przygody z bankowością postanowiłem
+            kształcić się w kierunku web developmentu. Szczegóły dotyczące mojej
+            dotychczasowej kariery zawodowej zamieściłem w CV (do pobrania
+            poniżej) oraz na moim profilu Linkedin.
+          </p>
+          <p class="about__paragraph">
+            W swoich projektach staram się używać poprawnego i semantycznego
+            kodu
+            <strong>HMTL i CSS</strong>. Korzystam ze składni preprocesora
+            <strong>SCSS</strong>. Swobodnie posługuję się
+            <strong>JavaScript'em</strong>, z wykorzystaniem najnowszych
+            standardów, zarówno do tworzenia prostych interakcji na stronie, jak
+            również do bardziej skomplikowanych zadań. Obecnie kładę nacisk
+            głównie na naukę <strong>React'a</strong> i w tym kierunku planuję
+            się dalej rozwijać. Do tworzenia wizualnej strony własnych projektów
+            wykorzystuję najczęściej aplikację <strong>Figma</strong>, znam
+            również Adobe Photoshop i Adobe XD. W swoich projektach wykorzystuję
+            proste konfiguracje utworzone w <strong>Webpack'u</strong>. Potrafię
+            wykorzystać możliwości <strong>GatsbyJS</strong> i
+            <strong>GraphQL</strong>.
+          </p>
+          <p class="about__paragraph">
+            Swobodnie posługuję się językiem angielskim (w mowie i w piśmie).
+            Posiadam certyfikaty FCE oraz LCCI 3.
+          </p>
+          <p class="about__paragraph">
+            Zachęcam do zapoznania się z moim repozytorium Github.
+          </p>
+        </section>
+        <a
+          href="./docs/CV_Paweł Król.pdf"
+          class="about__button"
+          aria-label="CV download link"
+          target="_blank"
+          rel="noopener"
+        >
+          CV
+        </a>
+        <a
+          href="https://github.com/pavkrol"
+          class="about__button"
+          aria-label="github link"
+          target="_blank"
+          rel="noopener"
+        >
+          GITHUB
+        </a>
+      </section>
+      <section id="contact" class="contact">
+        <h3 class="contact__title hidden">Kontakt</h3>
+        <p class="contact__text hidden">
+          Jeśli jesteś zainteresowany współpracą lub masz zlecenie, które
+          mógłbym dla Ciebie zrealizować, zapraszam do kontaktu. Wyślij
+          wiadomość za pomocą formularza lub skorzystaj z poniższych danych
+          kontaktowych.
+        </p>
+        <address class="contact__details hidden">
+          <a
+            href="mailto:kontakt@pavkrol.pl"
+            class="contact__link contact__link--mail"
+            >kontakt@pavkrol.pl</a
+          >
+          <a href="tel:+48530671067" class="contact__link contact__link--phone"
+            >530-671-067</a
+          >
+        </address>
+        <form
+          id="contact__form"
+          action="scripts/send.php"
+          method="post"
+          class="contact__form form hidden"
+        >
+          <div class="form__item">
+            <input
+              class="form__input"
+              id="form__name"
+              name="name"
+              type="text"
+              placeholder="Imię / nazwa firmy"
+              data-error="Wpisz swoje imię / nazwę firmy"
+              pattern=".+"
+              required
+            />
+            <label class="form__label" for="form__name"
+              >Imię / nazwa firmy</label
+            >
+          </div>
+          <div class="form__item form__item--phone">
+            <input
+              class="form__input"
+              id="form__phone"
+              name="phone"
+              type="tel"
+              placeholder="Numer telefonu"
+            />
+            <label class="form__label" for="form__phone">Numer telefonu</label>
+          </div>
+          <div class="form__item form__item--mail">
+            <input
+              class="form__email"
+              id="form__email"
+              name="email"
+              type="text"
+              placeholder="Adres e-mail"
+              data-error="Wpisz poprawny e-mail"
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              required
+            />
+            <label class="form__label" for="form__email">Adres e-mail</label>
+          </div>
+          <div class="form__item">
+            <textarea
+              class="form__message"
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Treść wiadomości"
+              data-error="Wiadomość nie może być pusta"
+              pattern=".+"
+              required
+            ></textarea>
+            <label class="form__label" for="message">Treść wiadomości</label>
+          </div>
+          <div class="form__item honey-row">
+            <input type="text" name="honey" />
+            <label for="honey"
+              >Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label
+            >
+          </div>
+          <input
+            class="form__submit"
+            id="form__submit"
+            type="submit"
+            value="wyślij"
+            aria-label="send message"
+          />
+        </form>
+      </section>
+      <footer class="footer">&copy; 2019 Paweł Król</footer>
+    </main>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/contact_form.js"></script>
+    <script src="./scripts/small_header.js"></script>
+    <script src="./scripts/fadein.js"></script>
+  </body>
+</html>
