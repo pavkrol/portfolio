@@ -64,6 +64,13 @@ input[type="submit"] {
       .header__link--linkedin:hover {
         transform: scale(1.1);
         filter: invert(73%) sepia(33%) saturate(1033%) hue-rotate(350deg) brightness(101%) contrast(102%); }
+    .header__link--polish, .header__link--english {
+      width: 30px;
+      height: 30px; }
+    .header__link--polish {
+      background-image: url(../img/poland.svg); }
+    .header__link--english {
+      background-image: url(../img/united-kingdom.svg); }
   .header__contact {
     display: none; }
     @media (min-width: 800px) {

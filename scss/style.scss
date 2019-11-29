@@ -78,6 +78,17 @@ input[type="submit"] {
           brightness(101%) contrast(102%);
       }
     }
+    &--polish,
+    &--english {
+      width: 30px;
+      height: 30px;
+    }
+    &--polish {
+      background-image: url(../img/poland.svg);
+    }
+    &--english {
+      background-image: url(../img/united-kingdom.svg);
+    }
   }
   &__contact {
     display: none;
