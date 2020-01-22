@@ -8,7 +8,7 @@
       name="Description"
       content="Personal portfolio page designed and implemented by Paweł Król"
     />
-    <title>Paweł Król | Web Developer</title>
+    <title>Paweł Król | Front-end Developer</title>
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700&display=swap"
       rel="stylesheet"
@@ -23,7 +23,7 @@
     <header class="header fade_in">
       <div class="header__logo logo">
         <h1 class="logo__title"><span>P</span>aweł <span>K</span>ról</h1>
-        <h2 class="logo__subtitle">Web Developer</h2>
+        <h2 class="logo__subtitle">Front-end developer</h2>
       </div>
       <a
         href="./index_en.html"
@@ -115,8 +115,10 @@
             <img class="hero__logo" src="./img/xd.png" alt="adobe xd logo" />
           </li>
         </ul>
-        <h3 class="hero__title fade_in">Cześć</h3>
-        <h4 class="hero__subtitle fade_in">Mam na imię Paweł, jestem Front-end Developerem</h4>
+        <h3 class="hero__title fade_in">Paweł Król</h3>
+        <h4 class="hero__subtitle fade_in">
+          Front-end Developer
+        </h4>
         <p class="hero__text fade_in">
           Poniżej znajdziesz kilka projektów, które wykonałem oraz więcej
           informacji o mnie
@@ -127,30 +129,32 @@
         <article class="portfolio__project project hidden">
           <a
             class="project__photo"
-            href="https://angaz.com.pl"
+            href="https://serene-beaver-32af35.netlify.com"
             target="_blank"
             rel="noopener"
           >
             <img
-              src="./img/project_angaz.jpg"
-              alt="screenshot of website for local company AN-GAZ"
+              src="./img/project_eventify.jpg"
+              alt="screenshot of Eventify application"
             />
           </a>
-          <h4 class="project__title">AN-GAZ Dystrybucja Gazu</h4>
+          <h4 class="project__title">Eventify</h4>
           <p class="project__description">
-            Strona internetowa typu one-page stworzona dla lokalnej firmy
-            zajmującej się dystrybucją gazu. Strona w całości zaprojektowana
-            przeze mnie. W trakcie jej implementacji wykorzystałem podejście
-            mobile first, preprocesor SCSS i metodologię BEM.
+            Prosta aplikacja pozwalająca na wyszukiwanie koncertów danego
+            artysty lub wszystkich odbywających się w danym mieście oraz zakup
+            biletu (przekierowuje na stronę sprzedawcy). Po zalogowaniu można
+            dodatkowo zapisać ulubionych artystów lub koncerty. Aplikacja
+            została stworzona w React i wykorzystuje Firebase do autoryzacji
+            użytkowników i zapisywania danych.
           </p>
           <ul class="project__technologies">
-            <li>SCSS</li>
-            <li>BEM</li>
+            <li>React</li>
             <li>JS</li>
+            <li>Firebase</li>
           </ul>
           <a
             class="project__github"
-            href="https://github.com/pavkrol/angaz-company-website"
+            href="https://github.com/pavkrol/eventify-app"
             aria-label="link to github repository"
             target="_blank"
             rel="noopener"
@@ -222,29 +226,30 @@
         <article class="portfolio__project project hidden">
           <a
             class="project__photo"
-            href="https://eventify.netlify.com/"
+            href="https://angaz.com.pl"
             target="_blank"
             rel="noopener"
           >
             <img
-              src="./img/project_eventify.jpg"
-              alt="screenshot of Eventify application"
+              src="./img/project_angaz.jpg"
+              alt="screenshot of website for local company AN-GAZ"
             />
           </a>
-          <h4 class="project__title">Eventify</h4>
+          <h4 class="project__title">AN-GAZ Dystrybucja Gazu</h4>
           <p class="project__description">
-            Prosta aplikacja pozwalająca na wyszukiwanie koncertów danego
-            artysty lub wszystkich odbywających się w danym mieście oraz zakup
-            biletu (przekierowuje na stronę sprzedawcy). Dane pobierane są z API
-            serwisu Songkick. Jest to moja pierwsza aplikacja w React.
+            Strona internetowa typu one-page stworzona dla lokalnej firmy
+            zajmującej się dystrybucją gazu. Strona w całości zaprojektowana
+            przeze mnie. W trakcie jej implementacji wykorzystałem podejście
+            mobile first, preprocesor SCSS i metodologię BEM.
           </p>
           <ul class="project__technologies">
-            <li>React</li>
+            <li>SCSS</li>
+            <li>BEM</li>
             <li>JS</li>
           </ul>
           <a
             class="project__github"
-            href="https://github.com/pavkrol/music-events-search"
+            href="https://github.com/pavkrol/angaz-company-website"
             aria-label="link to github repository"
             target="_blank"
             rel="noopener"
