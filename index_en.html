@@ -22,7 +22,7 @@
   <body>
     <header class="header fade_in">
       <div class="header__logo logo">
-        <h1 class="logo__title"><span>P</span>aweł <span>K</span>ról</h1>
+        <h1 class="logo__title"><span>P</span>aweł Król</h1>
         <h2 class="logo__subtitle">Front-end developer</h2>
       </div>
       <a
@@ -72,56 +72,109 @@
     </header>
     <main>
       <section class="hero">
-        <ul class="hero__logo_list fade_in">
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/html.png" alt="html logo" />
-          </li>
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/css.png" alt="css logo" />
-          </li>
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/js.png" alt="js logo" />
-          </li>
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/react.png" alt="react logo" />
-          </li>
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/sass.png" alt="sass logo" />
-          </li>
-          <li class="hero__item">
-            <img
-              class="hero__logo"
-              src="./img/webpack.png"
-              alt="webpack logo"
-            />
-          </li>
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/git.png" alt="git logo" />
-          </li>
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/gatsby.png" alt="gatsby logo" />
-          </li>
-          <li class="hero__item">
-            <img
-              class="hero__logo"
-              src="./img/graphql.png"
-              alt="graphql logo"
-            />
-          </li>
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/figma.svg" alt="figma logo" />
-          </li>
-          <li class="hero__item">
-            <img class="hero__logo" src="./img/xd.png" alt="adobe xd logo" />
-          </li>
-        </ul>
-        <h3 class="hero__title fade_in">Paweł Król</h3>
-        <h4 class="hero__subtitle fade_in">
-          Front-end Developer
-        </h4>
-        <p class="hero__text fade_in">
-          Couple of my projects and more information about me below
-        </p>
+        <div class="hero__aside_wrapper hero__aside_wrapper--left">
+          <ul class="hero__logo_list fade_in">
+            <li class="hero__item hero__item--html">
+              <img class="hero__logo" src="./img/html-5.svg" alt="html logo" />
+            </li>
+            <li class="hero__item hero__item--css">
+              <img class="hero__logo" src="./img/css3.svg" alt="css logo" />
+            </li>
+            <li class="hero__item hero__item--scss">
+              <img
+                class="hero__logo"
+                src="./img/sass-lang-icon.svg"
+                alt="sass logo"
+              />
+            </li>
+            <li class="hero__item hero__item--js">
+              <img
+                class="hero__logo"
+                src="./img/javascript.svg"
+                alt="js logo"
+              />
+            </li>
+            <li class="hero__item hero__item--react">
+              <img
+                class="hero__logo"
+                src="./img/reactjs-icon.svg"
+                alt="react logo"
+              />
+            </li>
+          </ul>
+          <ul class="hero__logo_list fade_in">
+            <li class="hero__item hero__item--webpack">
+              <img
+                class="hero__logo"
+                src="./img/js_webpack-icon.svg"
+                alt="webpack logo"
+              />
+            </li>
+            <li class="hero__item hero__item--git">
+              <img
+                class="hero__logo"
+                src="./img/git-scm-icon.svg"
+                alt="git logo"
+              />
+            </li>
+            <li class="hero__item hero__item--gatsby">
+              <img
+                class="hero__logo"
+                src="./img/gatsbyjs-icon.svg"
+                alt="gatsby logo"
+              />
+            </li>
+            <li class="hero__item hero__item--firebase">
+              <img
+                class="hero__logo"
+                src="./img/firebase-icon.svg"
+                alt="firebase logo"
+              />
+            </li>
+            <li class="hero__item hero__item--figma">
+              <img class="hero__logo" src="./img/figma.svg" alt="figma logo" />
+            </li>
+          </ul>
+          <h3 class="hero__text hero__text--reverse fade_in">Basics:</h3>
+          <ul class="hero__logo_list fade_in">
+            <li class="hero__item hero__item--graphql">
+              <img
+                class="hero__logo"
+                src="./img/graphql-icon.svg"
+                alt="graphql logo"
+              />
+            </li>
+            <li class="hero__item hero__item--reactnative">
+              <img
+                class="hero__logo"
+                src="./img/reactjs-icon.svg"
+                alt="react native logo"
+              />
+            </li>
+          </ul>
+          <h3 class="hero__text hero__text--reverse fade_in">
+            I'm currently learning:
+          </h3>
+          <ul class="hero__logo_list fade_in">
+            <li class="hero__item hero__item--redux">
+              <img
+                class="hero__logo"
+                src="./img/redux.svg"
+                alt="graphql logo"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__aside_wrapper hero__aside_wrapper--right">
+          <h3 class="hero__title fade_in">Paweł Król</h3>
+          <h4 class="hero__subtitle fade_in">
+            Front-end Developer
+          </h4>
+          <p class="hero__text fade_in">
+            Couple of my projects and more information about me below
+          </p>
+        </div>
       </section>
       <section id="portfolio" class="portfolio ">
         <h3 class="portfolio__title hidden">Portfolio</h3>
@@ -143,12 +196,11 @@
             artist or every concert in the exact city. Users can also buy a
             ticket for the chosen concert (application redirect to a seller
             website). Logged in users can also save favourite artists and
-            concerts. Users authorisation and managing data was created using
+            concerts. Users authorization and managing data was created in
             Firebase.
           </p>
           <ul class="project__technologies">
             <li>React</li>
-            <li>JS</li>
             <li>Firebase</li>
           </ul>
           <a
@@ -178,9 +230,7 @@
           </p>
           <ul class="project__technologies">
             <li>React</li>
-            <li>Styled Components</li>
             <li>Firebase</li>
-            <li>Webpack</li>
           </ul>
           <a
             class="project__github"
@@ -266,10 +316,8 @@
           </a>
           <h4 class="project__title">Fusion</h4>
           <p class="project__description">
-            Sample website based on a free PSD file. I used SCSS preprocessor
-            and JavaScript to create it. There are some interesting effects,
-            transitions and animations. The slider was written from scratch in
-            Javascript, without any external library.
+            Sample website based on a free PSD file, created using SCSS
+            preprocessor and JavaScript.
           </p>
           <ul class="project__technologies">
             <li>SCSS</li>
@@ -286,62 +334,21 @@
         </article>
 
         <article class="portfolio__project project hidden">
-          <a
-            class="project__photo"
-            href="https://pavkrol.github.io/photography-website-example"
-            target="_blank"
-            rel="noopener"
-          >
-            <img
-              src="./img/project_photography.jpg"
-              alt="screenshot of MariAnna Photography project website"
-            />
-          </a>
-          <h4 class="project__title">MariAnna Photography</h4>
+          <div class="project__photo project__photo--disabled">
+            <img src="./img/xkcd.png" alt="screenshot of XKCD project" />
+          </div>
+          <h4 class="project__title">XKCD</h4>
           <p class="project__description">
-            Sample website based on a free PSD file. It's written in pure CSS
-            and Javascript. By working on this website, I was able to use CSS
-            Grid capabilities to create responsive, scalable photo gallery.
+            Simple application created in React Native, which allows to fetch
+            and display few of the latest comics from xkcd.com website.
           </p>
           <ul class="project__technologies">
-            <li>CSS</li>
+            <li>React Native</li>
             <li>JS</li>
-            <li>PSD to HTML</li>
           </ul>
           <a
             class="project__github"
-            href="https://github.com/pavkrol/photography-website-example"
-            aria-label="link to github repository"
-            target="_blank"
-            rel="noopener"
-          ></a>
-        </article>
-        <article class="portfolio__project project hidden">
-          <a
-            class="project__photo"
-            href="https://pavkrol.github.io/top-designers"
-            target="_blank"
-            rel="noopener"
-          >
-            <img
-              src="./img/project_designers.jpg"
-              alt="screenshot of Fusion project website"
-            />
-          </a>
-          <h4 class="project__title">Top Designers</h4>
-          <p class="project__description">
-            Sample website based on a free PSD file. It's written in pure CSS
-            and Javascript. Circle progress bars were implemented in Javascript
-            without any external libraries usage.
-          </p>
-          <ul class="project__technologies">
-            <li>CSS</li>
-            <li>JS</li>
-            <li>PSD to HTML</li>
-          </ul>
-          <a
-            class="project__github"
-            href="https://github.com/pavkrol/top-designers"
+            href="https://github.com/pavkrol/xkcd"
             aria-label="link to github repository"
             target="_blank"
             rel="noopener"
@@ -373,10 +380,11 @@
             bundled my projects with <strong>Webpack</strong> (just a simple
             configuration for a small project). I can also use
             <strong>GatsbyJS</strong> and <strong>GraphQL</strong> to build a
-            static website.
+            static website. I used <strong>Firebase</strong> for authorization
+            and managing data in my recent projects.
           </p>
           <p class="about__paragraph">
-            I speak English fluently (spoken and written). I have FCE and LCCI 3
+            I speak English freely (spoken and written). I have FCE and LCCI 3
             certificates.
           </p>
           <p class="about__paragraph">
@@ -384,7 +392,7 @@
           </p>
         </section>
         <a
-          href="./docs/CV_Paweł Król.pdf"
+          href="./docs/CV Paweł Król EN.pdf"
           class="about__button"
           aria-label="CV download link"
           target="_blank"
@@ -401,6 +409,118 @@
         >
           GITHUB
         </a>
+        <div class="about__skills skills">
+          <ul class="skills__list fade_in">
+            <li class="skills__item ">
+              <img
+                class="skills__logo"
+                src="./img/html-5.svg"
+                alt="html logo"
+              />
+              <h4 class="skills__text">HMTL</h4>
+            </li>
+            <li class="skills__item">
+              <img class="skills__logo" src="./img/css3.svg" alt="css logo" />
+              <h4 class="skills__text">CSS</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="./img/sass-lang-icon.svg"
+                alt="sass logo"
+              />
+              <h4 class="skills__text">SCSS</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="./img/javascript.svg"
+                alt="js logo"
+              />
+              <h4 class="skills__text">Javascript</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="./img/reactjs-icon.svg"
+                alt="react logo"
+              />
+              <h4 class="skills__text">React</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="./img/js_webpack-icon.svg"
+                alt="webpack logo"
+              />
+              <h4 class="skills__text">Webpack</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="./img/git-scm-icon.svg"
+                alt="git logo"
+              />
+              <h4 class="skills__text">GIT</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="./img/gatsbyjs-icon.svg"
+                alt="gatsby logo"
+              />
+              <h4 class="skills__text">Gatsby</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="./img/firebase-icon.svg"
+                alt="firebase logo"
+              />
+              <h4 class="skills__text">Firebase</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="./img/figma.svg"
+                alt="figma logo"
+              />
+              <h4 class="skills__text">Figma</h4>
+            </li>
+          </ul>
+          <h3 class="skills__subtitle fade_in">Basics:</h3>
+          <ul class="skills__list fade_in">
+            <li class="skills__item skills__item">
+              <img
+                class="skills__logo"
+                src="./img/graphql-icon.svg"
+                alt="graphql logo"
+              />
+              <h4 class="skills__text">GraphQL</h4>
+            </li>
+            <li class="skills__item skills__item">
+              <img
+                class="skills__logo"
+                src="./img/reactjs-icon.svg"
+                alt="react native logo"
+              />
+              <h4 class="skills__text">React Native</h4>
+            </li>
+          </ul>
+          <h3 class="skills__subtitle fade_in">
+            I'm currently learing:
+          </h3>
+          <ul class="skills__list fade_in">
+            <li class="skills__item skills__item">
+              <img
+                class="skills__logo"
+                src="./img/redux.svg"
+                alt="graphql logo"
+              />
+              <h4 class="skills__text">Redux</h4>
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="contact" class="contact">
         <h3 class="contact__title hidden">Contact</h3>
@@ -488,7 +608,7 @@
           />
         </form>
       </section>
-      <footer class="footer">&copy; 2019 Paweł Król</footer>
+      <footer class="footer">&copy; 2020 Paweł Król</footer>
     </main>
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/contact_form.js"></script>
